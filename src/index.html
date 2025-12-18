@@ -1,0 +1,501 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Title -->
+  <title> Html Template</title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/images/logo/favicon.png">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <!-- Fontasosome -->
+  <link rel="stylesheet" href="assets/css/fontasosome.min.css">
+  <!-- Slick -->
+  <link rel="stylesheet" href="assets/css/slick.css">
+  <!-- line awesome -->
+  <link rel="stylesheet" href="assets/css/line-awesome.min.css">
+  <!-- Odometer -->
+  <link rel="stylesheet" href="assets/css/odometer.css">
+  <link rel="stylesheet" href="assets/css/odometer.css">
+  <link rel="stylesheet" href="assets/css/fancybox.css">
+  <link href="assets/css/select2.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+  <!-- Main css -->
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+  <!--==================== Preloader Start ====================-->
+<div class="preloader">
+    <div class="scissors">
+        <div class="half">
+            <div class="blade"></div>
+            <div class="handle"></div>
+        </div>
+
+        <div class="half">
+            <div class="blade"></div>
+            <div class="handle"></div>
+        </div>
+
+        <div class="joint"></div>
+    </div>
+</div>
+<!--==================== Preloader End ====================-->
+  <!--==================== Overlay Start ====================-->
+  <div class="body-overlay"></div>
+  <!--==================== Overlay End ====================-->
+
+  <!--==================== Sidebar Overlay End ====================-->
+  <div class="sidebar-overlay"></div>
+  <!--==================== Sidebar Overlay End ====================-->
+
+  <!-- ==================== Scroll to Top End Here ==================== -->
+  <a class="scroll-top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="currentColor" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 11.5C18 11.5 13.5811 5.50001 12 5.5C10.4188 5.49999 6 11.5 6 11.5"></path>
+      <path d="M18 18.5C18 18.5 13.5811 12.5 12 12.5C10.4188 12.5 6 18.5 6 18.5"></path>
+    </svg>
+  </a>
+  <!-- ==================== Scroll to Top End Here ==================== -->
+<!-- ==================== Header Start Here (Bootstrap Offcanvas) ==================== -->
+<header class="header" id="header">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand logo" href="index.html">
+                <img src="assets/images/logo/logo-dark.png" alt="logo">
+            </a>
+
+            <!-- Offcanvas toggler -->
+            <button class="navbar-toggler header-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span id="hiddenNav"><i class="las la-bars"></i></span>
+            </button>
+
+            <!-- Offcanvas menu -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <a class="navbar-brand logo" href="index.html">
+                        <img class="d-none d-lg-block" src="assets/images/logo/logo.png" alt="">
+                        <img class="d-lg-none" src="assets/images/logo/logo-dark.png" alt="">
+                    </a>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+
+                <div class="offcanvas-body ">
+                    <ul class="navbar-nav nav-menu mx-auto align-items-lg-center">
+                        <li class="nav-item active">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Dashboard</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Blog
+                                <span class="nav-item__icon"><i class="las la-angle-down"></i></span></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-menu__list"><a class="dropdown-item dropdown-menu__link" href="blog.html">Blog</a></li>
+                                <li class="dropdown-menu__list"><a class="dropdown-item dropdown-menu__link" href="#">Blog Details</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+
+                    <div class="login-btn d-flex justify-content-between">
+                        <a href="login.html" class="btn btn--base pill align-self-center">
+                            <span class="text">
+                                Login
+                            </span>
+
+                            <span class="icon">
+                                <i class="fa-solid fa-arrow-right ms-2"></i>
+                            </span>
+                        </a>
+                        <div class="custom-lang-dropdown d-lg-none">
+                            <div class="custom-dropdown">
+                                <div class="custom-dropdown__selected">
+                                    <span class="thumb"> <img class="custom-dropdown__img" src="assets/images/flag/bd.png" alt="img"></span>
+                                    <span class="text">Bangla</span>
+                                </div>
+                                <ul class="custom-dropdown__list">
+                                    <li class="custom-dropdown__list-item langChange" data-value="hn">
+                                        <span class="thumb"> <img class="custom-dropdown__img" src="assets/images/flag/af.png" alt="img"></span>
+                                        <span class="text">Hindi</span>
+                                    </li>
+                                    <li class="custom-dropdown__list-item langChange selected" data-value="bn">
+                                        <span class="thumb"> <img class="custom-dropdown__img" src="assets/images/flag/kh.png" alt="img"></span>
+                                        <span class="text">Bangla</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<!-- ==================== Header End Here ==================== -->
+<main>
+    <!--========================== Banner Section Start ==========================-->
+<section class="banner-section section-bg">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-md-6">
+                <div class="banner-content">
+                    <h5 class="banner-content_heading">
+                        <span class="icon">
+                            <svg aria-hidden="true" class="e-font-icon-svg e-fas-leaf" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M546.2 9.7c-5.6-12.5-21.6-13-28.3-1.2C486.9 62.4 431.4 96 368 96h-80C182 96 96 182 96 288c0 7 .8 13.7 1.5 20.5C161.3 262.8 253.4 224 384 224c8.8 0 16 7.2 16 16s-7.2 16-16 16C132.6 256 26 410.1 2.4 468c-6.6 16.3 1.2 34.9 17.5 41.6 16.4 6.8 35-1.1 41.8-17.3 1.5-3.6 20.9-47.9 71.9-90.6 32.4 43.9 94 85.8 174.9 77.2C465.5 467.5 576 326.7 576 154.3c0-50.2-10.8-102.2-29.8-144.6z"></path>
+                            </svg>
+                        </span>
+                        WELCOME TO OUR SALON
+                    </h5>
+                    <h1 class="banner-content__title">
+                        The Best Spa Salon for Your Wellness first Journey
+                    </h1>
+
+                    <p class="banner-content__desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem ipsum dolor sit amet consectetur
+                    </p>
+                    <div class="banner-service">
+
+                        <a href="" class="btn btn--base pill">
+                            <span class="text">Book Now</span>
+                            <span class="icon"><i class="fa-solid fa-arrow-right"></i></span>
+                        </a>
+                        <div class="banner-service__user">
+                            <img src="assets/images/thumbs/header-user.png" alt="">
+                            <span class="text">We have 2000+ Clients</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="banner-right">
+                    <div class="banner-thumb">
+                        <img src="https://kits.weblayoutpro.com/spalafa/wp-content/uploads/2025/01/New-Project-26-2.jpg" alt="">
+
+                    </div>
+                    <div class="banner-thumb-content">
+                        <span class="icon">
+                            <svg id="Layer_1" enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="m4.7 17.7c-1-1.1-1.6-2.3-1.6-4.3 0-3.5 2.5-6.6 6-8.2l.9 1.3c-3.3 1.8-4 4.1-4.2 5.6.5-.3 1.2-.4 1.9-.3 1.8.2 3.2 1.6 3.2 3.5 0 .9-.4 1.8-1 2.5-.7.7-1.5 1-2.5 1-1.1 0-2.1-.5-2.7-1.1zm10 0c-1-1.1-1.6-2.3-1.6-4.3 0-3.5 2.5-6.6 6-8.2l.9 1.3c-3.3 1.8-4 4.1-4.2 5.6.5-.3 1.2-.4 1.9-.3 1.8.2 3.2 1.6 3.2 3.5 0 .9-.4 1.8-1 2.5s-1.5 1-2.5 1c-1.1 0-2.1-.5-2.7-1.1z"></path>
+                            </svg>
+                        </span>
+                        <blockquote class="desc">
+                            Lorem ipsum dolor sit adipi amet,sit consec tetur adipi scing elit. Ut elit te llus, luctus nec ullamc orper mattis, pul vinar dapibus leo.Lorem
+                        </blockquote>
+                        <div class="banner-right__icon">
+                            <img src="https://kits.weblayoutpro.com/spalafa/wp-content/uploads/2025/01/New-Project-28-3.jpg" alt="">
+                            <a href="" class="banner-right__button">
+                                <span class="effect"></span>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" version="1.1" id="svg567" xml:space="preserve" width="682.66669" height="682.66669" viewBox="0 0 682.66669 682.66669">
+                                    <defs id="defs571">
+                                        <clipPath clipPathUnits="userSpaceOnUse" id="clipPath581">
+                                            <path d="M 0,512 H 512 V 0 H 0 Z" id="path579"></path>
+                                        </clipPath>
+                                    </defs>
+                                    <g id="g573" transform="matrix(1.3333333,0,0,-1.3333333,0,682.66667)">
+                                        <g id="g575">
+                                            <g id="g577" clip-path="url(#clipPath581)">
+                                                <g id="g583" transform="translate(378.0996,53.9995)">
+                                                    <path d="m 0,0 c -35.623,-21.578 -77.41,-34 -122.1,-34 -130.338,0 -236,105.661 -236,236 0,130.34 105.662,236 236,236 130.339,0 236,-105.66 236,-236 0,-48.467 -14.943,-93.521 -40,-131" style="fill:none;stroke:currentColor;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path585"></path>
+                                                </g>
+                                                <g id="g587" transform="translate(224.2314,179.0127)">
+                                                    <path d="m 0,0 99.701,57.761 c 14.757,8.549 14.757,29.904 0,38.453 L 0,153.975 c -14.767,8.554 -33.231,-2.129 -33.231,-19.226 V 19.226 C -33.231,2.128 -14.767,-8.555 0,0 Z" style="fill:none;stroke:currentColor;stroke-width:40;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path589"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="banner-right__star">
+                            <span class="icon">
+                                <i class="fa-regular fa-star"></i>
+                            </span>
+                            <div class="start-text">
+                                <span class="count">
+                                    250 +
+                                </span>
+                                <span class="rate">
+                                    5 Start Rating
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--========================== Banner Section End ==========================-->
+    <!--==========================  About-us Section Start  ==========================-->
+<section class="about-us-section my-120">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-xl-6 d-flex align-items-center">
+                <div class="about-thumb">
+                    <div class="thumb-1 about-thumb__img">
+                        <img src="assets/images/about/2.jpg" alt="">
+                    </div>
+                    <div class="thumb-2 about-thumb__img">
+                        <img src="assets/images/about/3.jpg" alt="">
+                    </div>
+                    <div class="about-thumb__overlay">
+                        <img src="assets/images/about/1.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <div class="section-heading style-left">
+                    <h5 class="section-heading__name">ABOUT US</h5>
+                    <h2 class="section-heading__title">Your Destination for Grooming &amp; Styling</h2>
+                    <p class="section-heading__desc">
+                        Step into Barberz and discover a grooming experience like no other. Our expert barbers are dedicated to their craft, providing personalized services that blend traditional techniques with modern styles.
+                    </p>
+                </div>
+                <div class="row gy-5">
+                    <div class="col-6">
+                        <div class="about-count counterUp">
+                            <div class="about-count__number">
+                                <span class="number odometer" data-odometer-final="16">01</span>
+                                <span class="symbol">Y</span>
+                            </div>
+                            <div class="about-count__title">Joyful Experience</div>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="about-count counterUp">
+                            <div class="about-count__number">
+                                <span class="number odometer" data-odometer-final="400">100</span>
+                                <span class="symbol">+</span>
+                            </div>
+                            <div class="about-count__title">Total Happy Clients</div>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="about-count counterUp">
+                            <div class="about-count__number">
+                                <span class="number odometer" data-odometer-final="26">10</span>
+                                <span class="symbol">+</span>
+                            </div>
+                            <div class="about-count__title">Team Members</div>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="about-count counterUp">
+                            <div class="about-count__number">
+                                <span class="number odometer" data-odometer-final="200">100</span>
+                                <span class="symbol">K+</span>
+                            </div>
+                            <div class="about-count__title">Complete Services</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--==========================  About-us Section End  ==========================-->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</main>
+<!-- Footer -->
+<!-- ==================== Footer Start Here ==================== -->
+<footer class="footer-area">
+    <div class="py-60">
+        <div class="container">
+            <div class="row gy-5">
+                <div class="order-sm-1 order-lg-1 col-xxl-4 col-lg-3 col-md-7 col-sm-7">
+                    <div class="footer-item">
+                        <div class="footer-item__logo">
+                            <a href="index.html"> <img src="assets/images/logo/logo.png" alt="logo"></a>
+                        </div>
+                        <p class="footer-item__desc">All-in-one productivity and time management platform built for
+                            every type of team. </p>
+
+                        <ul class="social-list">
+                            <li class="social-list__item">
+                                <a href="#" class="social-list__link flex-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.4122 23H10.0265C9.46092 23 9.00089 22.5213 9.00089 21.9328V13.9863H7.02557C6.46004 13.9863 6 13.5074 6 12.9191V9.51402C6 8.92555 6.46004 8.44685 7.02557 8.44685H9.00089V6.7417C9.00089 5.05098 9.51109 3.61253 10.4762 2.58212C11.4456 1.54701 12.8004 1 14.3941 1L16.9762 1.00436C17.5408 1.00537 18 1.48407 18 2.07153V5.23309C18 5.82156 17.5401 6.30026 16.9748 6.30026L15.2362 6.30093C14.706 6.30093 14.571 6.41154 14.5421 6.44545C14.4946 6.50168 14.4379 6.66063 14.4379 7.09955V8.44669H16.8441C17.0252 8.44669 17.2007 8.49318 17.3516 8.5808C17.6769 8.76996 17.8792 9.12764 17.8792 9.51419L17.8779 12.9193C17.8779 13.5074 17.4179 13.9861 16.8523 13.9861H14.4379V21.9328C14.4379 22.5213 13.9777 23 13.4122 23ZM10.2403 21.7103H13.1983V13.4089C13.1983 13.016 13.5056 12.6964 13.8831 12.6964H16.6384L16.6396 9.73659H13.8829C13.5054 9.73659 13.1983 9.41701 13.1983 9.02408V7.09955C13.1983 6.59567 13.2475 6.02264 13.613 5.59195C14.0547 5.07129 14.7507 5.0112 15.2359 5.0112L16.7605 5.01053V2.29376L14.3931 2.28973C11.8319 2.28973 10.2403 3.99573 10.2403 6.7417V9.02408C10.2403 9.41684 9.93322 9.73659 9.55577 9.73659H7.23945V12.6964H9.55577C9.93322 12.6964 10.2403 13.016 10.2403 13.4089V21.7103Z" fill="white"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social-list__item">
+                                <a href="#" class="social-list__link flex-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.33618 22.9106H7.03276V7.93066H1.33618V22.9106ZM2.62528 9.21976H5.74366V21.6214H2.62528V9.21976Z" fill="white"></path>
+                                        <path d="M4.18379 1.08789C2.42808 1.08789 0.999756 2.51626 0.999756 4.27193C0.999756 6.0276 2.42808 7.45601 4.18379 7.45601C5.93951 7.45601 7.36787 6.02764 7.36787 4.27193C7.36787 2.51621 5.93946 1.08789 4.18379 1.08789ZM2.28886 4.27193C2.28886 3.22707 3.13889 2.37699 4.18379 2.37699C5.22869 2.37699 6.07877 3.22702 6.07877 4.27193C6.07877 5.31683 5.22869 6.16691 4.18379 6.16691C3.13889 6.16691 2.28886 5.31679 2.28886 4.27193Z" fill="white"></path>
+                                        <path d="M22.9863 12.6352C22.7835 9.71952 20.3514 7.47266 17.3362 7.47266C15.9875 7.47266 14.7143 7.94155 13.7112 8.77353V7.93132H8.25269V22.9112H13.9493V14.7184C13.9493 13.7951 14.7005 13.0439 15.6239 13.0439C16.5471 13.0439 17.2984 13.7951 17.2984 14.7188L17.3039 22.9113H23V12.6491L22.9863 12.6352ZM12.6602 21.6222H9.54179V9.22046H12.422V11.0616L13.4535 11.0675L13.6452 10.77C14.4552 9.51249 15.835 8.7618 17.3362 8.7618C19.7354 8.7618 21.6565 10.5924 21.7097 12.9292L21.7109 21.6222H18.5921L18.5875 14.7184C18.5875 13.0842 17.258 11.7547 15.6239 11.7547C13.9897 11.7547 12.6602 13.0842 12.6602 14.7184V21.6222Z" fill="white"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social-list__item">
+                                <a href="#" class="social-list__link flex-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.9027 10.4686L21.3482 2H19.5838L13.119 9.3532L7.95547 2H2L9.8082 13.1193L2 22H3.76443L10.5915 14.2348L16.0445 22H22L13.9023 10.4686H13.9027ZM11.4861 13.2173L10.695 12.1101L4.40018 3.29967H7.11025L12.1902 10.4099L12.9813 11.5172L19.5847 20.7594H16.8746L11.4861 13.2177V13.2173Z" fill="white"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social-list__item">
+                                <a href="#" class="social-list__link flex-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.0807 11.0452L10.6928 8.5971C10.4405 8.45634 10.1423 8.46159 9.89504 8.61101C9.64759 8.76058 9.5 9.0248 9.5 9.31807V14.1723C9.5 14.4642 9.64668 14.728 9.89246 14.8777C10.0208 14.9559 10.1631 14.9951 10.3057 14.9951C10.4363 14.9951 10.5672 14.9622 10.6877 14.8961L15.0757 12.4901C15.3362 12.3472 15.4988 12.0711 15.5 11.7693C15.5011 11.4675 15.3404 11.1902 15.0807 11.0452ZM10.6639 13.5617V9.93366L13.9433 11.7634L10.6639 13.5617Z" fill="white"></path>
+                                        <path d="M22.3454 7.77142L22.3444 7.76175C22.3266 7.59172 22.1496 6.07933 21.4187 5.31008C20.5739 4.40529 19.6161 4.29537 19.1555 4.24267C19.1174 4.23832 19.0824 4.23429 19.0512 4.2301L19.0145 4.22623C16.2383 4.02316 12.0456 3.99544 12.0036 3.99528L11.9999 3.99512L11.9962 3.99528C11.9543 3.99544 7.76156 4.02316 4.96035 4.22623L4.92334 4.2301C4.89354 4.23413 4.86069 4.23783 4.82496 4.24202C4.36963 4.29489 3.42211 4.40496 2.57489 5.34247C1.87875 6.1035 1.67752 7.5835 1.65685 7.74982L1.65445 7.77142C1.6482 7.84217 1.5 9.52652 1.5 11.2175V12.7982C1.5 14.4892 1.6482 16.1735 1.65445 16.2444L1.65557 16.2551C1.67335 16.4224 1.85023 17.907 2.57777 18.6766C3.37212 19.5511 4.37652 19.6668 4.91677 19.729C5.00216 19.7389 5.0757 19.7472 5.12585 19.7561L5.1744 19.7629C6.77736 19.9163 11.8032 19.9919 12.0163 19.995L12.0227 19.9951L12.0291 19.995C12.0711 19.9948 16.2636 19.9671 19.0398 19.764L19.0765 19.7601C19.1116 19.7555 19.151 19.7513 19.1943 19.7468C19.647 19.6984 20.5894 19.598 21.4249 18.6732C22.1211 17.912 22.3225 16.432 22.343 16.2659L22.3454 16.2443C22.3516 16.1734 22.5 14.4892 22.5 12.7982V11.2175C22.4998 9.52652 22.3516 7.84233 22.3454 7.77142ZM21.2692 12.7982C21.2692 14.3633 21.1334 15.9751 21.1205 16.1231C21.0683 16.5307 20.856 17.4671 20.5168 17.8379C19.9939 18.4166 19.4567 18.474 19.0645 18.5158C19.0171 18.5208 18.9732 18.5256 18.9334 18.5306C16.2482 18.7259 12.2138 18.7559 12.028 18.757C11.8195 18.754 6.86724 18.6777 5.31314 18.5325C5.23352 18.5195 5.14748 18.5095 5.0568 18.4992C4.59682 18.4461 3.96717 18.3736 3.48299 17.8379L3.47162 17.8256C3.13837 17.4764 2.93217 16.6008 2.87978 16.1279C2.87001 16.0161 2.73062 14.3852 2.73062 12.7982V11.2175C2.73062 9.65417 2.86616 8.04411 2.8793 7.8931C2.94162 7.41298 3.15792 6.53333 3.48299 6.1778C4.02196 5.58148 4.59025 5.5154 4.96611 5.47173C5.002 5.46754 5.03549 5.46367 5.06641 5.45964C7.79072 5.26334 11.8541 5.23417 11.9999 5.23304C12.1457 5.23401 16.2077 5.26334 18.9078 5.45964C18.941 5.46383 18.9772 5.46802 19.0161 5.47253C19.4027 5.51685 19.987 5.5839 20.5233 6.15927L20.5282 6.16458C20.8615 6.51383 21.0677 7.40476 21.1201 7.88714C21.1294 7.9927 21.2692 9.62709 21.2692 11.2175V12.7982Z" fill="white"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="order-sm-3 order-lg-2 col-xxl-4 col-lg-2 col-md-4 col-sm-4">
+                    <div class="footer-item time-menu">
+                        <h5 class="footer-item__title">Work Time</h5>
+                        <ul class="footer-menu">
+                            <li class="footer-menu__item">
+                                <span class="day">Monday</span>
+                                <span class="time"> 10:00 - 20:00</span>
+                            </li>
+                            <li class="footer-menu__item">
+                                <span class="day">Tuesday</span>
+                                <span class="time"> 10:00 - 20:00</span>
+                            </li>
+                            <li class="footer-menu__item">
+                                <span class="day">Wednesday</span>
+                                <span class="time"> 10:00 - 20:00</span>
+                            </li>
+                            <li class="footer-menu__item">
+                                <span class="day">Weekend</span>
+                                <span class="time"> Closed</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="order-sm-4 order-lg-3 col-xxl-2 col-lg-2 col-md-4 col-sm-4">
+                    <div class="footer-item">
+                        <h5 class="footer-item__title">Quick Links</h5>
+                        <ul class="footer-menu">
+                            <li class="footer-menu__item"><a href="#" class="footer-menu__link">How it works </a>
+                            </li>
+                            <li class="footer-menu__item"><a href="#" class="footer-menu__link">FAQ’s</a></li>
+                            <li class="footer-menu__item"><a href="#" class="footer-menu__link">Contact </a></li>
+                            <li class="footer-menu__item"><a href="#" class="footer-menu__link">Blog</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="order-sm-2 order-lg-5 col-xxl-2 col-lg-3 col-md-5 col-sm-5">
+                    <div class="footer-item">
+                        <h5 class="footer-item__title">Contact</h5>
+                        <ul class="footer-menu">
+                            <li class="footer-menu__item">
+                                <a href="mailto:Contact@tsktracker.com" class="footer-menu__link">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.66675 5L7.4276 8.26414C9.55141 9.4675 10.4487 9.4675 12.5726 8.26414L18.3334 5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                                        <path d="M1.67989 11.23C1.73436 13.7847 1.76161 15.0619 2.70421 16.0082C3.64681 16.9543 4.95869 16.9872 7.58244 17.0532C9.1995 17.0938 10.8007 17.0938 12.4177 17.0532C15.0415 16.9872 16.3533 16.9543 17.296 16.0082C18.2386 15.0619 18.2658 13.7847 18.3202 11.23C18.3378 10.4086 18.3378 9.59208 18.3202 8.77066C18.2658 6.21604 18.2386 4.93873 17.296 3.99254C16.3533 3.04635 15.0415 3.01339 12.4177 2.94747C10.8007 2.90683 9.1995 2.90683 7.58243 2.94746C4.95869 3.01338 3.64681 3.04633 2.70421 3.99253C1.7616 4.93873 1.73436 6.21603 1.67988 8.77066C1.66236 9.59208 1.66237 10.4086 1.67989 11.23Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                                    </svg>
+                                    <span>Contact@test.com </span>
+                                </a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a href="tel:123456789" class="footer-menu__link">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 15.833H10.0083" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M11.2499 1.66699H8.74992C6.78574 1.66699 5.80364 1.66699 5.19344 2.27718C4.58325 2.88738 4.58325 3.86948 4.58325 5.83366V14.167C4.58325 16.1312 4.58325 17.1132 5.19344 17.7235C5.80364 18.3337 6.78574 18.3337 8.74992 18.3337H11.2499C13.2141 18.3337 14.1962 18.3337 14.8064 17.7235C15.4166 17.1132 15.4166 16.1312 15.4166 14.167V5.83366C15.4166 3.86948 15.4166 2.88738 14.8064 2.27718C14.1962 1.66699 13.2141 1.66699 11.2499 1.66699Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                    <span>+880 123456789</span>
+                                </a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a href="#" class="footer-menu__link">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.0834 7.50033C12.0834 8.65091 11.1507 9.58366 10.0001 9.58366C8.8495 9.58366 7.91675 8.65091 7.91675 7.50033C7.91675 6.34973 8.8495 5.41699 10.0001 5.41699C11.1507 5.41699 12.0834 6.34973 12.0834 7.50033Z" stroke="currentColor" stroke-width="1.5"></path>
+                                        <path d="M11.0479 14.5783C10.7668 14.849 10.3912 15.0003 10.0002 15.0003C9.60925 15.0003 9.23358 14.849 8.9525 14.5783C6.37866 12.0843 2.92941 9.29824 4.61151 5.25343C5.521 3.06643 7.7042 1.66699 10.0002 1.66699C12.2962 1.66699 14.4794 3.06643 15.3889 5.25343C17.0689 9.29316 13.6281 12.0929 11.0479 14.5783Z" stroke="currentColor" stroke-width="1.5"></path>
+                                        <path d="M15 16.667C15 17.5875 12.7614 18.3337 10 18.3337C7.23857 18.3337 5 17.5875 5 16.667" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                                    </svg>
+                                    <span>123 Maple Street, Springfield, IL 62704</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Top End-->
+
+
+    <!-- bottom Footer -->
+    <div class="bottom-footer ">
+        <div class="container flex-between">
+            <p>©All copy rights are reserved.</p>
+
+            <div class="custom-lang-dropdown d-lg-block d-none">
+                <div class="custom-dropdown">
+                    <div class="custom-dropdown__selected">
+                        <span class="thumb"> <img class="custom-dropdown__img" src="assets/images/flag/bd.png" alt="img"></span>
+                        <span class="text">Bangla</span>
+                    </div>
+                    <ul class="custom-dropdown__list">
+                        <li class="custom-dropdown__list-item langChange" data-value="hn">
+                            <span class="thumb"> <img class="custom-dropdown__img" src="assets/images/flag/af.png" alt="img"></span>
+                            <span class="text">Hindi</span>
+                        </li>
+                        <li class="custom-dropdown__list-item langChange selected" data-value="bn">
+                            <span class="thumb"> <img class="custom-dropdown__img" src="assets/images/flag/kh.png" alt="img"></span>
+                            <span class="text">Bangla</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- ==================== Footer End Here ==================== -->
+<!-- Jquery js -->
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<!-- Bootstrap Bundle Js -->
+<script src="assets/js/boostrap.bundle.min.js"></script>
+<!-- Slick js -->
+<script src="assets/js/slick.min.js"></script>
+<!-- Odometer js -->
+<script src="assets/js/odometer.min.js"></script>
+<!-- Viewport js -->
+<script src="assets/js/viewport.jquery.js"></script>
+<script src="assets/js/select2.min.js"></script>
+
+<script src="assets/js/fancybox.umd.js"></script>
+
+<script src="assets/js/apexcharts.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+
+<!-- main js -->
+<script src="assets/js/main.js"></script>
+
+
+</body></html>

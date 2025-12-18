@@ -1,0 +1,139 @@
+/* ======================  Counter Section Start  ======================*/
+.counter-section {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    .section-overlay {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}
+
+.counter-list {
+    display: flex;
+    justify-content: space-between;
+
+    @include sm-screen {
+        flex-direction: column;
+    }
+}
+
+.counter-list:has(.counter-item:hover) {
+    .counter-item {
+        background: #0808059c;
+    }
+}
+
+.counter-item {
+    flex: 1;
+    background: #0808059c;
+    padding: 200px 20px;
+    gap: 30px;
+    text-align: center;
+    flex: 1 1 33.33%;
+    transition: all 0.3s;
+
+    @include xxl-screen {
+        padding-block: 160px;
+    }
+
+    @include md-screen {
+        padding-block: 140px;
+    }
+
+    @include sm-screen {
+        padding-block: 40px;
+    }
+
+
+    &:hover {
+        flex-basis: 40%;
+        background: #080805d8 !important;
+    }
+
+
+    &:first-child,
+    &:nth-child(2) {
+        border-right: 2px solid hsl(var(--base-l-200)/0.5);
+
+        @include sm-screen {
+            border-right: 0;
+            border-bottom: 2px solid hsl(var(--base-l-200)/0.5);
+        }
+    }
+
+    &:nth-child(2) {
+        background: #080805d8;
+    }
+
+    &__desc {
+        font-size: 18px;
+        color: hsl(var(--white));
+        font-weight: 300;
+    }
+
+    &__header {
+
+        .count {
+            color: hsl(var(--white));
+            font-size: 100px;
+            margin-bottom: 0px;
+            font-weight: 500;
+            letter-spacing: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include xxl-screen {
+                font-size: 80px;
+            }
+
+            @include xl-screen {
+                font-size: 70px;
+            }
+
+            @include md-screen {
+                font-size: 50px;
+            }
+        }
+
+        .title {
+            color: hsl(var(--white));
+            font-size: clampCal(18px, 30px);
+            font-weight: 500;
+            margin-bottom: 80px;
+
+            @include xl-screen {
+                margin-bottom: 40px;
+            }
+
+            @include md-screen {
+                margin-bottom: 30px;
+            }
+
+            @include sm-screen {
+                font-weight: 400;
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    &__content {
+        max-width: 500px;
+        margin-inline: auto;
+    }
+}
+
+
+
+
+/* ======================  Counter Section End  ======================*/

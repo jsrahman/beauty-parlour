@@ -1,0 +1,230 @@
+@use 'sass:math';
+
+// Size function get value to hide and width make center the value;
+@mixin size($width, $position: false) {
+    width: $width;
+    height: $height;
+
+    @if $position=='center' {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+// Loop Base colors
+@mixin loopColors($name, $flows, $limits: 9) {
+    $i: 1;
+    $deep: 100;
+    $opacity: 0.1;
+
+    @while $i <=$limits {
+        @if ($flows=='dark') {
+            #{$name}-d-#{$deep}: var(#{$name}-h) var(#{$name}-s) calc(var(#{$name}-l) - var(#{$name}-l) * $opacity);
+        }
+
+        @if ($flows=='light') {
+            #{$name}-l-#{$deep}: var(#{$name}-h) calc(var(#{$name}-s)) calc(var(#{$name}-l) + (100% - var(#{$name}-l)) * $opacity);
+        }
+
+        // Upraised Value
+        $i: $i + 1;
+        $deep: $deep + 100;
+        $opacity: $opacity + 0.1;
+    }
+}
+
+// variable color to
+@mixin colorVariable($name, $hex, $loop: 0) {
+    //Dark and light will be the amount of loop;
+
+    // Return the round Values
+    $h: math.round(hue($hex));
+    $s: math.round(saturation($hex));
+    $l: math.round(lightness($hex));
+    $string-h: #{$h + ''};
+
+    // Remove deg from hsl values
+    $string-h: #{$h + ''}; //make it string
+    $h: str-slice($string-h, 1, -4); // remove last 3 digits
+
+    @if ($loop > 0) {
+        #{$name}-h: $h;
+        #{$name}-s: $s;
+        #{$name}-l: $l;
+        #{$name}: var(#{$name}-h) var(#{$name}-s) var(#{$name}-l);
+        @include loopColors(#{$name}, 'dark', $loop); //call loop function for looping Dark colors;
+        @include loopColors(#{$name}, 'light', $loop); //call loop function for looping light colors;
+    }
+
+    @else {
+        #{$name}: $h #{$s} #{$l};
+    }
+}
+
+// Button style mixin for shorthand button styles;
+// NOTE: Button Name will be same as variable declaration name;
+@mixin btn-style($name, $color: --white) {
+
+    //solid button style
+    &#{$name} {
+        background-color: hsl(var(#{$name})) !important;
+
+        &:has(.icon) {
+            .text {
+                color: hsl(var(#{$color}));
+            }
+
+            .icon {
+                color: hsl(var(#{$name}));
+            }
+        }
+
+        &:hover,
+        &:focus &:focus-visible {
+            background-color: hsl(var(#{$name}-d-200)) !important;
+            border: 1px solid hsl(var(#{$name}-d-200)) !important;
+        }
+    }
+
+    // Outline button styles
+    &-outline#{$name} {
+        background-color: transparent !important;
+        border: 1px solid hsl(var(#{$name})) !important;
+        color: hsl(var(#{$name})) !important;
+
+        &.pill {
+            border-radius: 100%;
+
+        }
+
+        .icon {
+            width: 42px !important;
+            height: 42px !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: inherit;
+            color: hsl(var(--white));
+            background: hsl(var(#{$name})) !important;
+            transition: all 0.3s;
+
+            i {
+                margin: 0 !important;
+            }
+        }
+
+        &:has(.icon:is(:last-child)) {
+            padding-right: 4px !important;
+        }
+
+        &:has(.icon:is(:first-child)) {
+            padding-left: 4px !important;
+        }
+
+        &:hover,
+        &:focus &:focus-visible {
+            background-color: hsl(var(#{$name})) !important;
+            color: hsl(var(#{$color})) !important;
+
+            .text {
+                color: hsl(var(#{$color})) !important;
+            }
+
+            .icon {
+                background: hsl(var(#{$color})) !important;
+                color: hsl(var(#{$name})) !important;
+            }
+        }
+    }
+}
+
+// Gradient button style;
+@mixin gradient-btn($name, $color1, $color2, $deg: 90deg) {
+    &#{$name} {
+        position: relative;
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: calc(100% + 2px);
+            height: calc(100% + 2px);
+            background: linear-gradient($deg, hsl(var($color2)) 0%, hsl(var($color1)) 100%);
+            border-radius: inherit !important;
+            z-index: -1;
+            transition: 0.2s linear;
+        }
+
+        &::after {
+            background: linear-gradient($deg, hsl(var($color1)) 0%, hsl(var($color2)) 100%);
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        &:hover,
+        &:focus,
+        &:focus-visible {
+            &::after {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+
+    // Outline button styles
+    &-outline#{$name} {
+        background-color: transparent !important;
+        border: 1px solid hsl(var(--base)) !important;
+        color: hsl(var(--base)) !important;
+        position: relative;
+        transition: 0.2s linear;
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: calc(100% + 2px);
+            height: calc(100% + 2px);
+            background: linear-gradient($deg, hsl(var($color2)) 0%, hsl(var($color1)) 100%);
+            border-radius: inherit !important;
+            z-index: -1;
+            transition: 0.2s linear;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        &:hover,
+        &:focus,
+        &:focus-visible {
+            color: hsl(var(--white)) !important;
+
+            &::before,
+            &::after {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+// Gradient button style;
+@mixin line-clamp($lines: 2) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+}
+
+@mixin get-icon($code, $font-family: 'Font Awesome 6 Free') {
+    content: '#{"/"}#{$code}';
+    font-family: $font-family;
+    font-weight: 900;
+}

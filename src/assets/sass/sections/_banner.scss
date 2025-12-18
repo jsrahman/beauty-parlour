@@ -1,0 +1,329 @@
+/* =========================== Banner Section Start Here ========================= */
+.banner-section {
+  position: relative;
+  z-index: 1;
+  padding: 180px 0 120px;
+  min-height: 100vh;
+
+
+
+
+  @include lg-screen {
+    padding: 230px 0 140px;
+  }
+
+  @include md-screen {
+    padding: 160px 0 100px;
+  }
+
+  @include msm-screen {
+    padding: 115px 0 60px;
+  }
+
+
+  .banner-service {
+    color: hsl(var(--heading-color));
+    display: flex;
+    gap: 80px;
+    align-items: left;
+    font-size: 22px;
+    justify-content: flex-start;
+    align-items: center;
+
+    @include lg-screen {
+      font-size: 20px;
+    }
+
+    @include md-screen {
+      font-size: 18px;
+      flex-direction: column;
+    }
+
+    @include md-screen {
+      font-size: 16px;
+    }
+
+    &__user {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      font-size: 16px;
+    }
+  }
+
+
+}
+
+@keyframes topBottom {
+  0% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(calc(var(--size) + 2px));
+  }
+}
+
+.banner-content {
+  &__title {
+    color: hsl(var(--heading-color));
+    font-size: rem(60px);
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 60px;
+    text-align: left;
+
+    span {
+      display: block;
+    }
+
+    .banner-content__text {
+      text-align: left;
+    }
+
+    @include xxl-screen {
+      width: fit-content;
+      font-size: rem(90px);
+    }
+
+    @include xl-screen {
+      font-size: rem(80px);
+    }
+
+    @include lg-screen {
+      font-size: rem(70px);
+    }
+
+    @include md-screen {
+      font-size: rem(50px);
+    }
+
+    @include sm-screen {
+      font-size: rem(40px);
+    }
+
+    @include msm-screen {
+      font-size: rem(35px);
+    }
+
+    @include xsm-screen {
+      font-size: rem(30px);
+    }
+  }
+
+  .banner-content_heading {
+    font-weight: 400;
+    color: hsl(var(--black));
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    border: 1px solid hsl(var(--border-color));
+    border-radius: 50px;
+    margin-bottom: 30px;
+    padding: 0 16px;
+    line-height: 2;
+    max-width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--body-font);
+    gap: 10px;
+
+    svg {
+      fill: hsl(var(--base));
+      width: 14px;
+    }
+  }
+
+  &__desc {
+    max-width: 600px;
+    color: hsl(var(--black) / 0.7);
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 400;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid hsl(var(--border-color));
+  }
+
+  &__button {
+    margin-top: 30px;
+  }
+}
+
+.banner-right {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+
+  .banner-thumb {
+    width: 355px;
+    height: 603px;
+    flex-shrink: 0;
+    border-radius: 500px;
+    overflow: hidden;
+    border: 5px solid hsl(var(--base));
+
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .icon {
+    color: hsl(var(--base));
+    line-height: 1;
+
+    i {
+      font-size: 40px;
+    }
+
+    svg {
+      width: 40px;
+      height: 40px;
+      fill: currentColor;
+    }
+  }
+
+  .desc {
+    font-size: 18px;
+    color: hsl(var(--black) / 0.7);
+  }
+
+  &-content {
+    .desc {
+      color: hsl(var(--black) / 0.7);
+    }
+  }
+
+  &__icon {
+    width: 100%;
+    aspect-ratio: 1/1.1;
+    position: relative;
+    border-radius: 10px 100px 10px 10px;
+    border: 3px solid hsl(var(--base));
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    svg {
+      --s: 26px;
+      width: var(--s);
+      height: var(--s);
+    }
+
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+  }
+
+  &__button {
+    --s: 60px;
+    position: absolute;
+    width: var(--s);
+    height: var(--s);
+    border-radius: 50%;
+    background-color: hsl(var(--base));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 24px;
+    color: hsl(var(--white));
+
+    &:hover {
+      background-color: hsl(var(--base-d-200));
+      color: hsl(var(--white));
+    }
+
+
+
+    .effect {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+
+      &::after,
+      &::before {
+        animation: button-ripple 3s infinite;
+        z-index: -2;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: var(--s);
+        height: var(--s);
+        border-radius: 50%;
+        background-color: hsl(var(--base));
+        color: #f3eee9;
+        --glow-size: 50px;
+
+      }
+
+      &::after {
+        animation-delay: .9s;
+        animation: button-ripple 2.5s infinite;
+      }
+    }
+  }
+
+  &__star {
+    display: flex;
+    align-items: center;
+    background: hsl(var(--base));
+    border-radius: 14px;
+    margin-top: 30px;
+    padding: 15px;
+
+    .start-text {
+      text-align: center;
+    }
+
+    .icon {
+      --space: 10px;
+      font-size: 40px;
+      border-right: 1px solid hsl(var(--white));
+      margin-right: var(--space);
+      padding-right: var(--space);
+      color: hsl(var(--white));
+
+
+
+    }
+
+    .count {
+      color: hsl(var(--white));
+      font-size: 24px;
+      font-weight: 600;
+      font-family: var(--heading-font);
+    }
+
+    .rate {
+      color: hsl(var(--white));
+      font-size: 18px;
+    }
+  }
+}
+
+
+@keyframes button-ripple {
+  70% {
+    box-shadow: 0 0 0 var(--glow-size, 15px) currentColor;
+    opacity: 0
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 currentColor;
+    opacity: 0
+  }
+}
+
+/* =========================== Banner Section End Here ========================= */

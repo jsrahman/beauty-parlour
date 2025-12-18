@@ -1,0 +1,186 @@
+/* =========================== Accordion Css start ============================= */
+.custom--accordion {
+  --accordion-padding: 24px;
+}
+
+@media screen and (max-width: 991px) {
+  .custom--accordion {
+    --accordion-padding: 18px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .custom--accordion {
+    --accordion-padding: 15px;
+  }
+}
+
+.custom--accordion .accordion-item {
+  border: 0;
+  border-top: 1px solid hsl(var(--border-color));
+  background-color: transparent !important;
+  overflow: hidden;
+  border-radius: 0;
+}
+
+.custom--accordion .accordion-item:last-child {
+  border-bottom: none;
+}
+
+.custom--accordion .accordion-item:first-child {
+  border-top: none;
+}
+
+.custom--accordion .accordion-header {
+  line-height: 1;
+}
+
+.custom--accordion .accordion-button {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  padding: 0;
+  font-family: var(--body-font);
+  padding-block: var(--accordion-padding);
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+
+@media screen and (max-width: 991px) {
+  .custom--accordion .accordion-button {
+    font-size: 1.125rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .custom--accordion .accordion-button {
+    font-size: 1rem;
+  }
+}
+
+.custom--accordion .accordion-button::after {
+  background-image: none;
+}
+
+.custom--accordion .accordion-button:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.custom--accordion .accordion-button:not(.collapsed) {
+  color: hsl(var(--heading-color));
+  background-color: transparent !important;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.custom--accordion .accordion-button:not(.collapsed)::after {
+  background-image: none;
+  color: hsl(var(--heading-color));
+}
+
+.custom--accordion .accordion-button[aria-expanded=true]::after,
+.custom--accordion .accordion-button[aria-expanded=false]::after {
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  content: "\f068";
+  display: inline-block;
+  position: absolute;
+  top: calc(var(--accordion-padding) / 2 + 12px);
+  right: 15px;
+  height: unset;
+  border: 1px solid hsl(var(--border-color));
+  width: 25px;
+  height: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transform: unset !important;
+  transform: unset !important;
+  background-color: hsl(var(--base));
+  color: hsl(var(--white));
+}
+
+
+@media screen and (max-width: 991px) {
+
+  .custom--accordion .accordion-button[aria-expanded=true]::after,
+  .custom--accordion .accordion-button[aria-expanded=false]::after {
+    top: calc(var(--accordion-padding) / 2 + 8px);
+  }
+}
+
+@media screen and (max-width: 575px) {
+
+  .custom--accordion .accordion-button[aria-expanded=true]::after,
+  .custom--accordion .accordion-button[aria-expanded=false]::after {
+    top: calc(var(--accordion-padding) / 2 + 6px);
+  }
+}
+
+.custom--accordion .accordion-button[aria-expanded=false]::after {
+  content: "\f067";
+  color: hsl(var(--body-color));
+  background-color: transparent;
+  color: hsl(var(--base));
+}
+
+
+.custom--accordion .accordion-item {
+  border-top: 1px solid hsl(var(--border-color));
+}
+
+.shipping-list .custom--accordion .accordion-item {
+  border-top: 1px solid hsl(var(--black)/ 0.1);
+}
+
+.custom--accordion .accordion-button[aria-expanded=true] {
+  padding-bottom: 16px;
+}
+
+@media screen and (max-width: 991px) {
+  .custom--accordion .accordion-button[aria-expanded=true] {
+    padding-bottom: 14px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .custom--accordion .accordion-button[aria-expanded=true] {
+    padding-bottom: 12px;
+  }
+}
+
+.custom--accordion .accordion-body {
+  padding: 0;
+  padding-bottom: var(--accordion-padding);
+}
+
+.custom--accordion .accordion-body .text {
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 991px) {
+  .custom--accordion .accordion-body .text {
+    font-size: 0.875rem;
+    font-weight: 400;
+  }
+}
+
+.custom--accordion:first-of-type .accordion-button.collapsed {
+  border-radius: 5px;
+}
+
+.custom--accordion:last-of-type .accordion-button.collapsed {
+  border-radius: 5px;
+}
+
+/* ================================= Accordion Css End =========================== */

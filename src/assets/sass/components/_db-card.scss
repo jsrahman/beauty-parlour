@@ -1,0 +1,122 @@
+.db-card {
+    border-radius: 12px;
+    background: hsl(var(--white));
+    overflow: hidden;
+    position: relative;
+    padding: 16px;
+    z-index: 1;
+    height: 100%;
+
+    @include md-screen {
+        padding: 10px;
+    }
+
+    &__link {
+        position: absolute;
+        inset: 0;
+    }
+
+    &:hover {
+        .db-card__header-arrow {
+            color: hsl(var(--base));
+        }
+    }
+
+    &__shape {
+        position: absolute;
+        font-size: 150px;
+        bottom: -40px;
+        right: -40px;
+        z-index: -1;
+        line-height: 1;
+
+        i {
+            color: var(--base-50);
+            line-height: 1;
+        }
+
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        flex-wrap: nowrap;
+
+
+        &-icon {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: color-mix(in oklab, hsl(var(--base)), hsl(var(--white)) 85%);
+            border-radius: 4px;
+            flex-shrink: 0;
+
+            i {
+                color: hsl(var(--base));
+            }
+        }
+
+        &-title {
+            margin-bottom: 0;
+            color: hsl(var(--neutral-500));
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 140%;
+            @include line-clamp(1)
+        }
+
+        &-arrow {
+            margin-left: auto;
+            color: hsl(var(--neutral-200));
+            transition: all 0.3s;
+            flex-shrink: 0;
+
+            svg {
+                path {}
+            }
+        }
+    }
+
+    &__body {
+        margin-top: 40px;
+
+        @include msm-screen {
+            margin-top: 30px;
+        }
+    }
+
+    &__amount {
+        color: hsl(var(--neutral-900));
+        font-weight: 700;
+        line-height: 120%;
+        margin-block: 0 0;
+
+
+        @media screen and (min-width: 1400px) {
+            font-size: clampCal(28px, 40px, 1400px);
+            margin-block: 0 0;
+        }
+
+        @include md-screen {
+            margin-block: 20px 0;
+            font-size: clampCal(28px, 40px, 370px, 992px);
+        }
+
+        @include sm-screen {
+            margin-block: 15px 0;
+
+
+        }
+
+    }
+
+    &__desc {
+        color: hsl(var(--neutral-400));
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 150%;
+    }
+}

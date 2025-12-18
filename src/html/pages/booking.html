@@ -1,0 +1,225 @@
+@@include('../layout/_template-top.html')
+@@include('../layout/_header.html')
+<main>
+    @@include('../layout/_breadcrumb.html', {
+    "title": "Book an appointment",
+    "desc": "Book an appointment with our team of experts to get started with your barber shop."
+    })
+    <!-- <section class="booking-section my-120">
+        <div class="container">
+            <div="row">
+                <div class="col-md-6">
+                    <div class="booking-thumb">
+                        <span class="booking-thumb__shape"></span>
+                        <img src="../../assets/images/thumbs/booking.avif" alt="Booking Thumb">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="booking-form">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name" class="form--label">Date
+                                        <span class="text-danger">*</span>
+                                    </label>
+                                    <input type="text" class="form-control form--control" id="name">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name" class="form--label">Slot
+                                        <span class="text-danger">*</span>
+                                    </label>
+                                    <input type="text" class="form-control form--control" id="name">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="name" class="form--label">Service Type
+                                        <span class="text-danger">*</span>
+                                    </label>
+
+                                    <select name="" id="" class="form--select2">
+                                        <option value="" selected disabled>Select Service Type</option>
+                                        <option value="mordan-haircut">Mordan Haircut</option>
+                                        <option value="hire-shave">Hire Shave</option>
+                                        <option value="beard-trim">Beard Trim</option>
+                                        <option value="hair-coloring">Hair Coloring</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="name" class="form--label">Time Slot
+                                        <span class="text-danger">*</span>
+                                    </label>
+
+                                    <select name="" id="" class="form--select2">
+                                        <option value="" selected disabled> Select Time Slot</option>
+                                        <option value="08:00 AM - 09:00 AM">08:00 AM - 09:00 AM</option>
+                                        <option value="09:00 AM - 10:00 AM">09:00 AM - 10:00 AM</option>
+                                        <option value="10:00 AM - 11:00 AM">10:00 AM - 11:00 AM</option>
+                                        <option value="11:00 AM - 12:00 PM">11:00 AM - 12:00 PM</option>
+                                        <option value="12:00 PM - 01:00 PM">12:00 PM - 01:00 PM</option>
+                                        <option value="01:00 PM - 02:00 PM">01:00 PM - 02:00 PM</option>
+                                        <option value="02:00 PM - 03:00 PM">02:00 PM - 03:00 PM</option>
+                                        <option value="03:00 PM - 04:00 PM">03:00 PM - 04:00 PM</option>
+                                        <option value="04:00 PM - 05:00 PM">04:00 PM - 05:00 PM</option>
+                                        <option value="05:00 PM - 06:00 PM">05:00 PM - 06:00 PM</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="phone" class="form--label">Phone Number
+                                    </label>
+                                    <input type="text" class="form-control form--control" id="phone">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="phone" class="form--label">Phone Number
+                                    </label>
+                                    <input type="text" class="form-control form--control" id="phone">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div=>
+        </div>
+    </section> -->
+    <section class="booking-process my-120">
+        <div class="container">
+            <div class="service">
+                <div class="add-service__header">
+                    <ul class="add-service__steps">
+                        <li class="add-service__step active">
+                            <span class="add-service__step-number "></span>
+                            <span class="add-service__step-text">Service</span>
+                        </li>
+                        <li class="add-service__step   ">
+                            <span class="add-service__step-number"></span>
+                            <span class="add-service__step-text">Time Slot</span>
+                        </li>
+                        <li class="add-service__step ">
+                            <span class="add-service__step-number"></span>
+                            <span class="add-service__step-text">Stylish</span>
+                        </li>
+                        <li class="add-service__step ">
+                            <span class="add-service__step-number"></span>
+                            <span class="add-service__step-text">Review &amp; confirm</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="add-service__body">
+                    <form class="add-service__form">
+                        <div class="row gy-4">
+                            <div class="col-lg-6">
+                                <label for="service1" class="booking-service-card">
+                                    <span class="check">
+                                        <i class="fa-solid fa-check"></i>
+                                    </span>
+                                    <span class="booking-service-card__heading">
+                                        <span class="title">Modern Haircut</span>
+                                        <span class="price">$30</span>
+                                    </span>
+                                    <span class="desc">
+                                        Experience a fresh, modern haircut tailored to your unique style and preferences. Our skilled barbers are dedicated to providing precision cuts, ensuring you leave feeling confident and looking your best.
+                                    </span>
+                                    <input class="d-none" type="checkbox" name="service" id="service1">
+                                </label>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <label for="service2" class="booking-service-card">
+                                    <span class="check">
+                                        <i class="fa-solid fa-check"></i>
+                                    </span>
+                                    <span class="booking-service-card__heading">
+                                        <span class="title">Classic Shave</span>
+                                        <span class="price">$20</span>
+                                    </span>
+                                    <span class="desc">
+                                        Indulge in a luxurious classic shave. Our master barbers use hot towels, premium shaving creams, and precise techniques to give you the smoothest shave and refresh your skin.
+                                    </span>
+                                    <input class="d-none" type="checkbox" name="service" id="service2">
+                                </label>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="service3" class="booking-service-card">
+                                    <span class="check">
+                                        <i class="fa-solid fa-check"></i>
+                                    </span>
+                                    <span class="booking-service-card__heading">
+                                        <span class="title">Beard Trim & Shape</span>
+                                        <span class="price">$25</span>
+                                    </span>
+                                    <span class="desc">
+                                        Get your beard perfectly groomed and shaped. Our experts will trim, sculpt, and style your beard to enhance your facial features, leaving it looking sharp and well-maintained.
+                                    </span>
+                                    <input class="d-none" type="checkbox" name="service" id="service3">
+                                </label>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="service4" class="booking-service-card">
+                                    <span class="check">
+                                        <i class="fa-solid fa-check"></i>
+                                    </span>
+                                    <span class="booking-service-card__heading">
+                                        <span class="title">Hair Coloring</span>
+                                        <span class="price">$60</span>
+                                    </span>
+                                    <span class="desc">
+                                        Transform your look with our professional hair coloring service. Choose from a wide range of shades or consult with our color specialists to find the perfect hue that complements your style.
+                                    </span>
+                                    <input class="d-none" type="checkbox" name="service" id="service4">
+                                </label>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="service5" class="booking-service-card">
+                                    <span class="check">
+                                        <i class="fa-solid fa-check"></i>
+                                    </span>
+                                    <span class="booking-service-card__heading">
+                                        <span class="title">Head Massage</span>
+                                        <span class="price">$15</span>
+                                    </span>
+                                    <span class="desc">
+                                        Relax and rejuvenate with a soothing head massage. This service helps to relieve tension, improve circulation, and promote a sense of calm and well-being.
+                                    </span>
+                                    <input class="d-none" type="checkbox" name="service" id="service5">
+                                </label>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="service6" class="booking-service-card">
+                                    <span class="check">
+                                        <i class="fa-solid fa-check"></i>
+                                    </span>
+                                    <span class="booking-service-card__heading">
+                                        <span class="title">Facial Cleansing</span>
+                                        <span class="price">$45</span>
+                                    </span>
+                                    <span class="desc">
+                                        Treat your skin to a revitalizing facial cleansing. Our service includes deep pore cleansing, exfoliation, and a nourishing mask to leave your skin feeling fresh, clean, and radiant.
+                                    </span>
+                                    <input class="d-none" type="checkbox" name="service" id="service6">
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="add-service__footer">
+                    <a href="javascript:void(0);" disabled class="btn btn-outline--base">Back</a>
+                    <a href="booking-time.html" class="btn btn--base flex-align gap-2">Continue
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+<!-- Footer -->
+@@include('../layout/_footer.html')
+@@include('../layout/_template-bottom.html')

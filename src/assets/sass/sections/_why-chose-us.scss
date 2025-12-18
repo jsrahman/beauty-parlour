@@ -1,0 +1,119 @@
+/* ======================  Why-chose-us Section Start  ======================*/
+.why-chose-us-section {
+    .row:has(.chose-card) {
+        [class^="col"] {
+            --border: 1px solid hsl(var(--border-color));
+
+            border-right: var(--border);
+            border-bottom: var(--border);
+
+        }
+
+        @media screen and (min-width:1199px) {
+            [class^="col"]:nth-child(3n) {
+                border-right-width: 0px;
+            }
+
+            [class^="col"]:nth-last-child(-n+3) {
+                border-bottom-width: 0px;
+            }
+
+            &:has([class^="col"]:last-child:is(:nth-child(3n+2))) [class^="col"]:nth-last-child(3) {
+                border-bottom-width: 1px;
+            }
+
+            &:has([class^="col"]:last-child:is(:nth-child(3n+1))) [class^="col"]:nth-last-child(3),
+            &:has([class^="col"]:last-child:is(:nth-child(3n+1))) [class^="col"]:nth-last-child(2) {
+                border-bottom-width: 1px;
+            }
+        }
+
+        @media screen and (max-width:1199px) {
+            [class^="col"]:nth-child(2n) {
+                border-right-width: 0px;
+            }
+
+            [class^="col"]:nth-last-child(-n+2) {
+                border-bottom-width: 0px;
+            }
+
+            [class^="col"]:nth-last-child(-n+2):nth-child(even) {
+                border-bottom-width: 1px;
+            }
+
+        }
+
+
+        & [class^="col"]:nth-last-child(-n+1) {
+            border-right-width: 0px;
+            border-bottom-width: 0px !important;
+        }
+
+        @media screen and (max-width:575px) {
+
+            & [class^="col"] {
+                border: 0px;
+                border-bottom: var(--border) !important;
+            }
+        }
+    }
+}
+
+.chose-card {
+    text-align: center;
+    padding: 30px 35px;
+
+    &__content {
+        max-width: 400px;
+        margin-inline: auto;
+
+    }
+
+    &__desc {}
+
+    &__thumb {
+        --size: 90px;
+        height: var(--size);
+        width: var(--size);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin-inline: auto;
+        background-color: hsl(var(--base)/0.05);
+        border: 1px solid hsl(var(--base)/0.2);
+        margin-bottom: 20px;
+
+        @include lg-screen {
+            --size: 80px;
+        }
+
+        img {
+            --size: 55px;
+            height: var(--size);
+            width: var(--size);
+
+            @include lg-screen {
+                --size: 40px;
+            }
+
+        }
+
+    }
+
+    &__title {
+        font-size: 26px;
+        font-weight: 600;
+
+
+        @include lg-screen {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+
+    }
+}
+
+
+/* ======================  Why-chose-us Section End  ======================*/

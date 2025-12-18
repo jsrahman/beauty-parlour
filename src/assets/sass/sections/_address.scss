@@ -1,0 +1,45 @@
+/* ======================  Address Section Start  ======================*/
+.address-section {}
+
+.address-card {
+    &:not(:last-child) {
+        margin-bottom: 15aaaqqqqpx;
+        padding-bottom: 15px;
+        border-bottom: 1px solid hsl(var(--section-bg)/0.5);
+    }
+
+    &-list {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+    }
+
+
+    &__content {}
+
+    &__desc {
+        color: hsl(var(--white));
+        font-size: 22px;
+
+        @include md-screen {
+            font-size: 18px;
+
+        }
+    }
+
+
+    &__title {
+        font-size: 18px;
+        color: #ddd;
+        margin-bottom: 5px;
+
+        @include md-screen {
+            font-size: 16px;
+
+        }
+    }
+}
+
+
+
+/* ======================  Address Section End  ======================*/

@@ -1,0 +1,523 @@
+@@include('../layout/_template-top.html')
+@@include('../layout/_header.html')
+
+<main>
+    @@include('../layout/_breadcrumb.html', {
+    "breadcrumbText": "Demo",
+    "breadcrumbLink": "Demo"
+    })
+    <section class="py-120">
+        <div class="container">
+            <div class="row gy-4 mb-4">
+                <!-- alert -->
+                <div class="col-lg-12">
+                    <div class="alert alert--base mb-4">
+                        <div class="alert__icon">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </div>
+                        <div class="alert__content">
+                            <h6 class="alert__title">Tracking Update</h6>
+                            <p class="alert__desc">
+                                Shipment ID 654321 has departed from the sorting facility and is on its way to
+                                the delivery center
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="alert alert--info alert-dismissible fade show">
+                        <div class="alert__icon">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </div>
+                        <div class="alert__content">
+                            <h6 class="alert__title">Alert Dismissible</h6>
+                            <p class="alert__desc">
+                                Shipment ID 654321 has departed from the sorting facility and is on its way to
+                                the
+                                delivery
+                                center
+                            </p>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2 mt-4">
+                        <div class="alert alert-primary" role="alert">
+                            A simple primary alert—check it out!
+                        </div>
+                        <div class="alert alert-secondary" role="alert">
+                            A simple secondary alert—check it out!
+                        </div>
+                        <div class="alert alert-success" role="alert">
+                            A simple success alert—check it out!
+                        </div>
+                        <div class="alert alert-danger" role="alert">
+                            A simple danger alert—check it out!
+                        </div>
+                        <div class="alert alert-warning" role="alert">
+                            A simple warning alert—check it out!
+                        </div>
+                        <div class="alert alert-info" role="alert">
+                            A simple info alert—check it out!
+                        </div>
+                        <div class="alert alert-light" role="alert">
+                            A simple light alert—check it out!
+                        </div>
+                        <div class="alert alert-dark" role="alert">
+                            A simple dark alert—check it out!
+                        </div>
+                    </div>
+                </div>
+                <!-- card -->
+                <div class="col-lg-6">
+
+                    <div class="card custom--card">
+                        <div class="card-header">
+                            <h4 class="card-header__title">Demo Card Title</h4>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima officia eos quia
+                                numquam eligendi quo aliquam nemo saepe? Nostrum, numquam ratione cupiditate asperiores
+                                commodi nisi error. Facere perferendis sit id?
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="btn btn--sm btn--base rounded-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Example modal
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card custom--card mt-3">
+                        <div class="card-body mt-0">
+                            <!-- Button -->
+                            <button class="btn btn--base btn--lg">Large Button</button>
+                            <button class="btn btn--base">Normal Button</button>
+                            <button class="btn btn--base btn--sm">Small Button</button>
+                            <br><br>
+                            <!-- Button Outline -->
+                            <button class="btn btn-outline--base btn--lg">Large Button</button>
+                            <button class="btn btn-outline--base">Normal Button</button>
+                            <button class="btn btn-outline--base btn--sm">Small Button</button>
+
+                            <p class="mt-4">
+                                <span class="badge badge--secondary">New</span>
+                                <span class="badge badge--base">New</span>
+                                <span class="badge badge--primary">New</span>
+                                <span class="badge badge--warning">New</span>
+                                <span class="badge badge--danger">New</span>
+                                <span class="badge badge--info">New</span>
+                                <span class="badge badge--white">New</span>
+                                <span class="badge badge--dark">New</span>
+                            </p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card custom--card">
+                        <div class="card-body">
+                            <div class="accordion custom--accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Accordion Item #1
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p>
+                                                <strong>This is the first item’s accordion body.</strong> It is shown by
+                                                default, until the collapse plugin adds the appropriate classes that we
+                                                use
+                                                to style each element. These classes control the overall appearance, as
+                                                well
+                                                as the showing and hiding via CSS transitions. You can modify any of
+                                                this
+                                                with custom CSS or overriding our default variables. It’s also worth
+                                                noting
+                                                that just about any HTML can go within the <code>.accordion-body</code>,
+                                                though the transition does limit overflow.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Accordion Item #2
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p><strong>This is the second item’s accordion body.</strong> It is hidden by
+                                                default, until the collapse plugin adds the appropriate classes that we use
+                                                to style each element. These classes control the overall appearance, as well
+                                                as the showing and hiding via CSS transitions. You can modify any of this
+                                                with custom CSS or overriding our default variables. It’s also worth noting
+                                                that just about any HTML can go within the <code>.accordion-body</code>,
+                                                though the transition does limit overflow.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            Accordion Item #3
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p><strong>This is the second item’s accordion body.</strong> It is hidden by
+                                                default, until the collapse plugin adds the appropriate classes that we use
+                                                to style each element. These classes control the overall appearance, as well
+                                                as the showing and hiding via CSS transitions. You can modify any of this
+                                                with custom CSS or overriding our default variables. It’s also worth noting
+                                                that just about any HTML can go within the <code>.accordion-body</code>,
+                                                though the transition does limit overflow.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                            Accordion Item #4
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p><strong>This is the second item’s accordion body.</strong> It is hidden by
+                                                default, until the collapse plugin adds the appropriate classes that we use
+                                                to style each element. These classes control the overall appearance, as well
+                                                as the showing and hiding via CSS transitions. You can modify any of this
+                                                with custom CSS or overriding our default variables. It’s also worth noting
+                                                that just about any HTML can go within the <code>.accordion-body</code>,
+                                                though the transition does limit overflow.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal custom--modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"> </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima officia eos
+                                        quia
+                                        numquam
+                                        eligendi quo aliquam nemo saepe? Nostrum, numquam ratione cupiditate asperiores
+                                        commodi
+                                        nisi
+                                        error. Facere perferendis sit id?
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn--sm btn--secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn--sm btn--base">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- input style -->
+                <div class="col-lg-6">
+                    <div class="card custom--card">
+                        <div class="card-header">
+                            <h5 class="card-title">Input Style</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row gy-4">
+                                <div class="col-12">
+                                    <label for="lable1" class="form--label">Large Input Field</label>
+                                    <input type="text" class="form-control form--control form--control-lg" placeholder="Enter Topic" id="lable1">
+                                </div>
+                                <div class="col-12">
+                                    <label for="lable2" class="form--label">Normal Input Field</label>
+                                    <input type="text" class="form-control form--control" placeholder="Enter Topic" id="lable2">
+                                </div>
+                                <div class="col-12">
+                                    <label for="lable3" class="form--label">Small Input Field</label>
+                                    <input type="text" class="form-control form--control form--control-sm" placeholder="Enter Topic" id="lable3">
+                                </div>
+                                <div class="col-12">
+                                    <label for="lable4" class="form--label">Textarea</label>
+                                    <textarea class="form-control form--control" id="lable4" rows="4" placeholder="Your Message"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <div class="input-group input--group">
+                                        <input type="text" class="form-control form--control" placeholder="Add a comment">
+                                        <button class="input-group-text" type="submit">
+                                            Send
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="input-group input--group">
+                                        <button class="input-group-text" type="submit">
+                                            <i class="fa fa-dollar"></i>
+                                        </button>
+                                        <input type="text" class="form-control form--control" placeholder="Add a comment">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <input type="file" class="form-control form--control form--control-lg" id="customFile">
+                                </div>
+                                <div class="col-12">
+                                    <input type="file" class="form-control form--control" id="customFile">
+                                </div>
+                                <div class="col-12">
+                                    <input type="file" class="form-control form--control form--control-sm" id="customFile">
+                                </div>
+
+                                <div class="col-12">
+                                    <select class="form-select form--select form-select--lg form--select2" name="" id="">
+                                        <option value="US" data-src="assets/images/flags/us.png">United States</option>
+                                        <option value="CA" data-src="assets/images/flags/bd.png">Bangladesh</option>
+                                        <option value="GB" data-src="assets/images/flags/fr.png">France</option>
+                                        <option value="AU" data-src="assets/images/flags/pak.png">Pakistan</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <select class="form-select form--select form--select2" name="" id="">
+                                        <option value="US" data-src="assets/images/flags/us.png">United States</option>
+                                        <option value="CA" data-src="assets/images/flags/bd.png">Bangladesh</option>
+                                        <option value="GB" data-src="assets/images/flags/fr.png">France</option>
+                                        <option value="AU" data-src="assets/images/flags/pak.png">Pakistan</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <select class="form-select form--select form-select--sm form--select2" name="" id="">
+                                        <option value="US" data-src="assets/images/flags/us.png">United States</option>
+                                        <option value="CA" data-src="assets/images/flags/bd.png">Bangladesh</option>
+                                        <option value="GB" data-src="assets/images/flags/fr.png">France</option>
+                                        <option value="AU" data-src="assets/images/flags/pak.png">Pakistan</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- empty table -->
+            <div class="table-wrapper custom--card overflow-hidden">
+                <div class="table-top p-4 pb-0 flex-align align-items-center justify-content-between">
+                    <h5 class="mb-0">Shares History</h5>
+                    <div class="table-top-filter flex-1">
+                        <form>
+                            <div class="input-group input--group">
+                                <input type="search" class="form-control form--control" placeholder="Search...">
+                                <button class="input-group-text" type="submit">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="table-wrapper-body p-4">
+                    <table class="table table--responsive--lg">
+                        <thead>
+                            <tr>
+                                <th>Invoice No</th>
+                                <th>Customer</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Invoice No">#95954</td>
+                                <td data-label="Customer">
+                                    <div class="customer flex-align">
+                                        <div class="customer__content">
+                                            <h6 class="customer__name">Tomaslau</h6>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-label="Date">01-Jan-2023</td>
+                                <td data-label="Total Click">45745</td>
+                                <td data-label="Status"><span class="badge badge--success"> Completed </span></td>
+                                <td data-label="Action">
+                                    <div class="action-buttons">
+                                        <button type="button" class="action-btn edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Edit"> <i class="fas fa-pen"></i></button>
+                                        <button type="button" class="action-btn delete-btn" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Delete"><i class="fas fa-trash-alt"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Invoice No">#95954</td>
+                                <td data-label="Customer">
+                                    <div class="customer flex-align">
+                                        <div class="customer__content">
+                                            <h6 class="customer__name">Erwin E. Brown</h6>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-label="Date">01-Jan-2023</td>
+                                <td data-label="Total Click">4747</td>
+                                <td data-label="Status"><span class="badge badge--primary"> Done </span></td>
+                                <td data-label="Action">
+                                    <div class="action-buttons">
+                                        <button type="button" class="action-btn edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Edit"> <i class="fas fa-pen"></i></button>
+                                        <button type="button" class="action-btn delete-btn" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Delete"><i class="fas fa-trash-alt"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Invoice No">#95954</td>
+                                <td data-label="Customer">
+                                    <div class="customer flex-align">
+                                        <div class="customer__content">
+                                            <h6 class="customer__name">Margeret V. Ligon</h6>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-label="Date">01-Jan-2023</td>
+                                <td data-label="Total Click">5744</td>
+                                <td data-label="Status"><span class="badge badge--success"> Approved </span></td>
+                                <td data-label="Action">
+                                    <div class="action-buttons">
+                                        <button type="button" class="action-btn edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Edit"> <i class="fas fa-pen"></i></button>
+                                        <button type="button" class="action-btn delete-btn" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Delete"><i class="fas fa-trash-alt"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Invoice No">#95954</td>
+                                <td data-label="Customer">
+                                    <div class="customer flex-align">
+                                        <div class="customer__content">
+                                            <h6 class="customer__name">Jose D. Delacruz</h6>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-label="Date">01-Jan-2023</td>
+                                <td data-label="Total Click">59853</td>
+                                <td data-label="Status"><span class="badge badge--info"> Completed </span></td>
+                                <td data-label="Action">
+                                    <div class="action-buttons">
+                                        <button type="button" class="action-btn edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Edit"> <i class="fas fa-pen"></i></button>
+                                        <button type="button" class="action-btn delete-btn" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Delete"><i class="fas fa-trash-alt"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Invoice No">#95954</td>
+                                <td data-label="Customer">
+                                    <div class="customer flex-align">
+                                        <div class="customer__content">
+                                            <h6 class="customer__name">Luke J. Sain</h6>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-label="Date">01-Jan-2023</td>
+                                <td data-label="Total Click">383455</td>
+                                <td data-label="Status"><span class="badge badge--warning"> Completed </span></td>
+                                <td data-label="Action">
+                                    <div class="action-buttons">
+                                        <button type="button" class="action-btn edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Edit"> <i class="fas fa-pen"></i></button>
+                                        <button type="button" class="action-btn delete-btn" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Delete"><i class="fas fa-trash-alt"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Invoice No">#95954</td>
+                                <td data-label="Customer">
+                                    <div class="customer flex-align">
+                                        <div class="customer__content">
+                                            <h6 class="customer__name">Jamal Burnett</h6>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-label="Date">01-Jan-2023</td>
+                                <td data-label="Total Click">284234</td>
+                                <td data-label="Status"><span class="badge badge--secondary"> Completed </span></td>
+                                <td data-label="Action">
+                                    <div class="action-buttons">
+                                        <button type="button" class="action-btn edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Edit"> <i class="fas fa-pen"></i></button>
+                                        <button type="button" class="action-btn delete-btn" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Delete"><i class="fas fa-trash-alt"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Invoice No">#95954</td>
+                                <td data-label="Customer">
+                                    <div class="customer flex-align">
+                                        <div class="customer__content">
+                                            <h6 class="customer__name">Jamal Burnett</h6>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-label="Date">01-Jan-2023</td>
+                                <td data-label="Total Click">8953</td>
+                                <td data-label="Status"><span class="badge badge--danger"> Cancel </span></td>
+                                <td data-label="Action">
+                                    <div class="action-buttons">
+                                        <button type="button" class="action-btn edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Edit"> <i class="fas fa-pen"></i></button>
+                                        <button type="button" class="action-btn delete-btn" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Delete"><i class="fas fa-trash-alt"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+            <br>
+            <!-- empty table -->
+            <div class="table-wrapper custom--card overflow-hidden">
+                <div class="table-top p-4 pb-0 flex-align align-items-center justify-content-between">
+                    <h5 class="mb-0">Shares History</h5>
+                    <div class="table-top-filter flex-1">
+                        <form>
+                            <div class="input-group input--group">
+                                <input type="search" class="form-control form--control" placeholder="Search...">
+                                <button class="input-group-text" type="submit">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="table-wrapper-body p-4">
+
+                    <table class="table table--responsive--lg">
+                        <thead>
+                            <tr>
+                                <th>Invoice No</th>
+                                <th>Customer</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="100%">
+                                    <div class="empty-message text-center">
+                                        <p class="empty-message-icon">
+                                            <img src="assets/images/thumbs/no-data.gif" alt="">
+                                        </p>
+                                        <p class="empty-message-text">
+                                            No transactions found
+                                        </p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+@@include('../layout/_footer.html')
+@@include('../layout/_template-bottom.html')

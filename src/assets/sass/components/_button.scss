@@ -1,0 +1,165 @@
+/* ================================= Button Css Start =========================== */
+.btn-check:checked+.btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check)+.btn:active {
+  color: none;
+  background-color: none;
+  border-color: none;
+}
+
+.pill {
+  border-radius: 40px !important;
+}
+
+.btn-close {
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:focus-visible {
+    outline: none;
+    box-shadow: unset;
+  }
+}
+
+.btn {
+  color: hsl(var(--white)) !important;
+  font-weight: 500;
+  padding: 12px 29px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-family: var(--body-font);
+  width: fit-content;
+  @include fs-16;
+
+  &:has(.icon) {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 4px;
+    height: 50px;
+
+
+
+    .text {
+      height: 100%;
+      align-content: center;
+      padding-inline: 15px;
+      border-radius: inherit;
+      text-shadow: 0 30px currentColor;
+      overflow: hidden;
+      transition: all 0.3s;
+      width: 100%;
+    }
+
+
+    .icon {
+      --sizer: 41px;
+      font-size: 18px;
+      overflow: hidden;
+      width: var(--sizer);
+      height: var(--sizer);
+      border-radius: inherit;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      background: hsl(var(--white));
+
+      i {
+        transition: all 0.3s;
+        transform: rotate(-45deg) translate(0px, 2px);
+        text-shadow: -35px 0px currentColor;
+        margin: 0 !important;
+      }
+
+      &:is(:first-child) {
+        margin-right: 5px;
+        display: none;
+      }
+    }
+
+    &:hover {
+      .icon {
+
+        i {
+          transform: rotate(-45deg) translate(35px, 2px);
+        }
+      }
+    }
+
+  }
+
+
+  // @include sm-screen {
+  //   padding: 14px 25px;
+  //   @include fs-14;
+  // }
+
+  // @include msm-screen {
+  //   padding: 12px 20px;
+  // }
+  &.disabled,
+  &[disabled],
+  &[readonly] {
+    cursor: not-allowed;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    box-shadow: none !important;
+  }
+
+  &:active {
+    top: 1px;
+  }
+
+  &--lg {
+    padding: 20px 35px;
+
+    @include md-screen {
+      padding: 18px 30px;
+    }
+
+    @include sm-screen {
+      padding: 16px 25px;
+    }
+  }
+
+  &--sm {
+    padding: 10px 22px;
+    font-weight: 600;
+
+    @include sm-screen {
+      padding: 8px 12px;
+    }
+  }
+
+  &--icon {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    @include fs-15;
+    padding: 0;
+  }
+
+  // ============= Gradient Button Start =======================
+  // @include gradient-btn(--base, --base, --base-two, 90deg);
+  // ============= Gradient Button End =======================
+  // ============= Different Color Button Start ==================
+  @include btn-style(--base);
+  @include btn-style(--base-two);
+  @include btn-style(--primary);
+  @include btn-style(--secondary);
+  @include btn-style(--danger);
+  @include btn-style(--warning);
+  @include btn-style(--info);
+  @include btn-style(--dark);
+}
+
+/* ================================= Button Css End =========================== */

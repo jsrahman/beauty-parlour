@@ -1,0 +1,25 @@
+/* =============================== Brand Section Css Start ======================= */
+.client-logos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  img {
+    width: 180px !important;
+  }
+
+  &.slider-reverse {
+    transform: scale(-1);
+    margin-top: 25px !important;
+
+    img {
+      transform: scale(-1);
+    }
+  }
+}
+
+/* =============================== Brand Section Css End ======================= */

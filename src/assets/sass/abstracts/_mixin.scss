@@ -1,0 +1,208 @@
+//* ============================ Media Breakpoint for Each Device Start ============================ */
+
+//Mobile Landscape
+@mixin landscape {
+  @media all and (orientation: landscape) {
+    @content;
+  }
+}
+
+//Mobile Portrait
+@mixin portrait {
+  @media all and (orientation: portrait) {
+    @content;
+  }
+}
+
+//Extra Extra Small Screen
+@mixin xxsm-screen {
+  @media screen and (max-width: 374px) {
+    @content;
+  }
+}
+
+// Extra Small Screen
+@mixin xsm-screen {
+  @media screen and (max-width: 424px) {
+    @content;
+  }
+}
+
+// Medium Small Screen (max-width: 575)
+@mixin msm-screen {
+  @media screen and (max-width: 575px) {
+    @content;
+  }
+}
+
+//Small Screen (max-width: 767)
+@mixin sm-screen {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+//Large Screen (max-width: 991)
+@mixin md-screen {
+  @media screen and (max-width: 991px) {
+    @content;
+  }
+}
+
+//Extra Large Screen (max-width: 1199)
+@mixin lg-screen {
+  @media screen and (max-width: 1199px) {
+    @content;
+  }
+}
+
+//Xtra Large Screen i (max-width: 1399)
+@mixin xl-screen {
+  @media screen and (max-width: 1399px) {
+    @content;
+  }
+}
+
+//Extra Large Screen ii (max-width: 1499)
+@mixin xxl-screen {
+  @media screen and (max-width: 1499px) {
+    @content;
+  }
+}
+
+//Extra Large Screen ii (max-width: 1599)
+@mixin xxxl-screen {
+  @media screen and (max-width: 1599px) {
+    @content;
+  }
+}
+
+// ============================ Media Breakpoint for Each Device End ============================
+
+// ================================== Font Size For responsive devices Start ===============================+
+
+@mixin fs-10 {
+  font-size: rem(10px);
+}
+
+@mixin fs-11 {
+  font-size: rem(11px);
+}
+
+@mixin fs-12 {
+  font-size: rem(12px);
+}
+
+@mixin fs-13 {
+  font-size: rem(13px);
+}
+
+@mixin fs-14 {
+  font-size: rem(14px);
+}
+
+@mixin fs-15 {
+  font-size: rem(15px);
+}
+
+@mixin fs-16 {
+  font-size: rem(16px);
+}
+
+@mixin fs-17 {
+  font-size: rem(17px);
+}
+
+@mixin fs-18 {
+  font-size: rem(18px);
+}
+
+@mixin fs-19 {
+  font-size: rem(19px);
+}
+
+@mixin fs-20 {
+  font-size: rem(20px);
+}
+
+@mixin fs-21 {
+  font-size: rem(21px);
+}
+
+@mixin fs-22 {
+  font-size: rem(22px);
+}
+
+@mixin fs-23 {
+  font-size: rem(23px);
+}
+
+@mixin fs-24 {
+  font-size: rem(24px);
+}
+
+@mixin fs-25 {
+  font-size: rem(25px);
+}
+
+@mixin fs-26 {
+  font-size: rem(26px);
+}
+
+@mixin fs-27 {
+  font-size: rem(27px);
+}
+
+@mixin fs-28 {
+  font-size: rem(28px);
+}
+
+@mixin fs-29 {
+  font-size: rem(29px);
+}
+
+@mixin fs-30 {
+  font-size: rem(30px);
+}
+
+@mixin fs-31 {
+  font-size: rem(31px);
+}
+
+@mixin fs-32 {
+  font-size: rem(32px);
+}
+
+@mixin fs-33 {
+  font-size: rem(33px);
+}
+
+@mixin fs-34 {
+  font-size: rem(34px);
+}
+
+@mixin fs-35 {
+  font-size: rem(35px);
+}
+
+@mixin fs-36 {
+  font-size: rem(36px);
+}
+
+@mixin fs-37 {
+  font-size: rem(37px);
+}
+
+@mixin fs-38 {
+  font-size: rem(38px);
+}
+
+@mixin fs-39 {
+  font-size: rem(39px);
+}
+
+@mixin fs-40 {
+  font-size: rem(40px);
+}
+
+//* ================================== Font Size For responsive devices End =============================== */

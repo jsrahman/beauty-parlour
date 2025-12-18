@@ -1,0 +1,88 @@
+@@include('../layout/_template-top.html', {'page':'Dashboard'})
+
+<!-- ==================== Dashboard Start Here ==================== -->
+<div class="dashboard">
+    <div class="container-fluid">
+        @@include('../sections/_sidebar-menu.html',{
+        page:'dashboard'
+        })
+        <div class="dashboard__inner">
+            @@include('../sections/_dashboard-top.html', {hasSearch: true,
+            title:"Dashboard"})
+            <div class="dashboard-body">
+                <div class="alert-item-wrapper">
+                    <div class="alert-item mb-4">
+                        <div class="alert flex-align alert--base" role="alert">
+                            <span class="alert__icon"><i class="lar la-check-circle"></i></span>
+                            <div class="alert__content">
+                                <span class="alert__title fs-16">Payment Success</span>
+                                <p class="alert__desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                    Voluptatum, et. Fugit saepe aliquam quisquam consequatur.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gy-4">
+                    <div class="col-xxl-6">
+                        <div class="row gy-4">
+                            <div class="col-md-6">
+                                @@include('../components/_db-card.html', {
+                                icon:"fa-solid fa-chart-simple",
+                                title:"Total Processed Volume",
+                                amount:"$125,430.50",
+                                })
+                            </div>
+                            <div class="col-md-6">
+                                @@include('../components/_db-card.html', {
+                                icon:"fa-solid fa-calendar-days",
+                                title:"Revenue This Month",
+                                amount:"$18,240.00",
+                                })
+                            </div>
+                            <div class="col-md-6">
+                                @@include('../components/_db-card.html', {
+                                icon:"fa-solid fa-clock",
+                                title:"Pending Settlements",
+                                amount:"$2,120.00",
+                                })
+                            </div>
+                            <div class="col-md-6">
+                                @@include('../components/_db-card.html', {
+                                icon:"fa-solid fa-receipt",
+                                title:"Transection Today",
+                                amount:"$224.00",
+                                })
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xxl-6">
+                        @@include('../components/_chart-card.html')
+                    </div>
+                </div>
+                <div class="table-chart pt-60 w-100">
+
+                    <div class="flex-1 w-100">
+                        @@include('../sections/_table.html')
+                    </div>
+
+                    <div class="chart-card pie-chart flex-shrink-0">
+                        <div class="chart-card__header">
+                            <div class="chart-card__title">
+                                <p class="chart-card__title-type">Statistics</p>
+                                <h6 class="chart-card__title-name">Payment received.</h6>
+                            </div>
+                        </div>
+
+                        <div class="chart-card__body">
+                            <div id="apexPieChat"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ==================== Dashboard End Here ==================== -->
+<!-- Footer -->
+@@include('../layout/_template-bottom.html')

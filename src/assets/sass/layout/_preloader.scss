@@ -1,0 +1,139 @@
+/* ================================= preload Css Start =========================== */
+.preloader {
+  position: fixed;
+  z-index: 999999;
+  background-color: hsl(var(--white));
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .scissors {
+    position: relative;
+    width: 90px;
+    height: 26.25px;
+    margin: 30px auto;
+  }
+
+  .half {
+    width: 90px;
+    height: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transform-origin: 44.58333% 100% 0;
+    transform: rotate(10deg);
+    animation: rot-up 1s ease-out infinite;
+  }
+
+  .half:nth-child(even) {
+    top: 11.25px;
+    transform-origin: 44.58333% 0% 0;
+    transform: rotate(-10deg);
+    animation: rot-down 1s ease-out infinite;
+  }
+
+  .half:nth-child(even) .blade {
+    top: 0;
+    border-radius: 0 3.75px 0 0;
+  }
+
+  .half:nth-child(even) .blade:after {
+    top: 3.75px;
+    border-style: solid;
+    border-width: 3.75px 7.5px 0 7.5px;
+    border-color: hsl(var(--base)) transparent transparent transparent;
+  }
+
+  @keyframes rot-up {
+    0% {
+      transform: rotate(10deg);
+    }
+
+    50% {
+      transform: rotate(40deg);
+    }
+
+    100% {
+      transform: rotate(10deg);
+    }
+  }
+
+  @keyframes rot-down {
+    0% {
+      transform: rotate(-10deg);
+    }
+
+    50% {
+      transform: rotate(-40deg);
+    }
+
+    100% {
+      transform: rotate(-10deg);
+    }
+  }
+
+  .joint {
+    width: 2.625px;
+    height: 2.625px;
+    border-radius: 50%;
+    background: hsl(var(--base-l-400));
+    position: absolute;
+    top: 11.8125px;
+    left: 43.125%;
+  }
+
+  .handle {
+    width: 30px;
+    height: 15px;
+    border-radius: 7.5px;
+    border: 3.75px solid hsl(var(--base-d-100));
+    background: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+  }
+
+  .blade {
+    width: 60px;
+    height: 3.75px;
+    position: absolute;
+    top: 11.25px;
+    left: 30px;
+    background: hsl(var(--base));
+    border-radius: 0 0 3.75px 0;
+  }
+
+  .blade:before {
+    content: '';
+    width: 15px;
+    height: 3.75px;
+    background: hsl(var(--base));
+    position: absolute;
+    top: 0;
+    left: -15px;
+  }
+
+  .blade:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 7.5px 3.75px 7.5px;
+    border-color: transparent transparent hsl(var(--base)) transparent;
+    position: absolute;
+    top: -3.75px;
+    left: -7.5px;
+  }
+
+}
+
+
+/* ================================= preload Css End ===========================  */

@@ -1,0 +1,98 @@
+@@include('../layout/_template-top.html')
+<main class="flex-1 h-100">
+    <section class="account">
+        <div class="account-left d-none d-xl-flex justify-content-between flex-column">
+            <span class="account-left__thumb">
+                <video src="assets/video/account-video.mov" autoplay loop muted></video>
+            </span>
+            <div class="account-thumb__content">
+                <h3 class="account-thumb__content-desc">Indulge in beauty and relaxation</h3>
+                <h1 class="account-thumb__content-title">Premium Salon Services, Tailored for You</h1>
+            </div>
+            <div class="account-left__slider ">
+
+                <div class="testimonial-slider">
+                    @@include("../components/_testimonial-slider.html",{
+                    img:'05.png',
+                    })
+                    @@include("../components/_testimonial-slider.html",{
+                    img:'02.png',
+                    })
+                    @@include("../components/_testimonial-slider.html",{
+                    img:'03.png',
+                    })
+                    @@include("../components/_testimonial-slider.html",{
+                    img:'04.png',
+                    })
+                    @@include("../components/_testimonial-slider.html",{
+                    img:'01.png',
+                    })
+                    @@include("../components/_testimonial-slider.html",{
+                    img:'06.png',
+                    })
+                </div>
+            </div>
+        </div>
+        <div class="account-content">
+            <div class="account-content__inner">
+                <div class="content text-center">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="../../assets/images/logo/logo-dark.png" alt="logo">
+                        </a>
+
+                    </div>
+                    <h4 class="account-content__title">Welcome Back</h4>
+                    <p class="account-content__desc">Enter your email and password to access your account.</p>
+                </div>
+
+
+                <div class="account-form__logins">
+                    <a href="" class="account-form__logins-item">
+                        <img src="assets/images/thumbs/google-logo.png" alt="google">
+
+                        <figure class="text">
+                            <span class="continue">Continue With</span>
+                            Google
+                        </figure>
+                    </a>
+                    <a href="" class="account-form__logins-item">
+                        <img src="assets/images/thumbs/google-logo.png" alt="google">
+
+                        <figure class="text">
+                            <span class="continue">Continue With</span>
+                            Facebook
+                        </figure>
+                    </a>
+                </div>
+                <div class="or text-center">
+                    Or Continue with
+                </div>
+
+                <form class="account-from">
+                    <div class="form-group">
+                        <label class="form--label" for="email">Email</label>
+                        <input type="email" class="form--control" id="email" name="email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <div class="flex-between">
+                            <label class="form--label" for="password">Password</label>
+                            <a href="#" class="form--link">Forgot password?</a>
+                        </div>
+                        <input type="password" class="form--control" id="password" name="password" placeholder="Enter your password">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn--base w-100">
+                            <span class="text">Sign In</span>
+                            <span class="icon"><i class="fas fa-arrow-right"></i></span>
+                        </button>
+                    </div>
+                </form>
+                <div class="have-account text-center mt-3 mt-sm-4">
+                    <p class="have-account__text">Don't have an account? <a href="registration.html" class="have-account__link text--base">Sign Up</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+@@include('../layout/_template-bottom.html')

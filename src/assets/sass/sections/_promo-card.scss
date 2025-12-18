@@ -1,0 +1,169 @@
+/* ======================  highlight-card Section Start  ======================*/
+.highlight-card-section {
+    background: hsl(var(--black));
+
+    .section-heading__name {
+        color: hsl(var(--base-l-400));
+
+        &::after {
+            border: 1px solid hsl(var(--white) / 0.2);
+            background-color: hsl(var(--white) / 0.1);
+        }
+    }
+
+    .section-heading__title,
+    .section-heading__desc {
+        color: hsl(var(--white));
+    }
+
+    .highlight-card {
+        display: flex;
+        gap: 20px;
+        border-radius: 16px;
+        height: 100%;
+        text-align: right;
+        flex-direction: row-reverse;
+        align-items: center;
+        max-width: 375px;
+        margin-left: auto;
+
+        @include md-screen {
+            text-align: left;
+            padding: 12px;
+            gap: 10px;
+            flex-direction: row;
+            margin-left: 0;
+        }
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            gap: 110px;
+
+            @include lg-screen {
+                gap: 80px;
+            }
+
+            @include md-screen {
+                gap: 30px;
+            }
+
+            @include sm-screen {
+                gap: 24px;
+            }
+        }
+
+
+        &__thumb {
+            --size: 50px;
+            align-items: flex-start;
+            flex-shrink: 0;
+            height: var(--size);
+            width: var(--size);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+
+
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: -15px;
+                right: 0;
+                width: var(--size);
+                height: 2px;
+                background-color: hsl(var(--white)/0.8);
+
+                @include md-screen {
+                    bottom: -5px;
+                }
+
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            @include md-screen {
+                --size: 60px;
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+
+
+            @include sm-screen {
+                --size: 55px;
+
+                img {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+
+        &__content {
+            flex: 1 1 150px;
+        }
+
+        &__title {
+            font-size: 26px;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: hsl(var(--white));
+
+            @include lg-screen {
+                font-size: 22px;
+            }
+
+            @include md-screen {
+                font-size: 20px;
+            }
+        }
+
+        &__desc {
+            color: hsl(var(--white)/0.9);
+            font-size: 16px;
+            font-weight: 300;
+
+        }
+
+    }
+
+    .highlight-thumb {
+        position: relative;
+        padding-inline: 15px;
+
+        @include md-screen {
+            display: none;
+        }
+
+
+        &::before {
+            content: '';
+            background-image: linear-gradient(#0000, #000000b3 41%, #000);
+            height: 40%;
+            position: absolute;
+            bottom: 0%;
+            left: 0%;
+            right: 0%;
+
+        }
+    }
+
+    .last-list {
+        .highlight-card {
+            flex-direction: row;
+            margin-left: 0px;
+            text-align: left;
+        }
+    }
+}
+
+/* ======================  highlight-card Section End  ======================*/

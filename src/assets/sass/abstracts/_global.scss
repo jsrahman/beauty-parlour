@@ -1,0 +1,128 @@
+/* ====================== Section Heading ==================== */
+.section-heading {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  position: relative;
+  z-index: 1;
+
+  @include lg-screen {
+    margin-bottom: 60px;
+  }
+
+  @include md-screen {
+    margin-bottom: 50px;
+  }
+
+  @include sm-screen {
+    margin-bottom: 40px;
+  }
+
+  @include sm-screen {
+    margin-bottom: 40px;
+  }
+
+
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 50px;
+    letter-spacing: 1px;
+    max-width: 600px;
+    margin-inline: auto;
+
+
+    @include xl-screen {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    @include md-screen {
+      font-size: 30px;
+      max-width: 500px;
+      margin-bottom: 14px;
+    }
+
+    @include sm-screen {
+      margin-bottom: 20px;
+    }
+
+    @include xsm-screen {
+      font-size: 25px;
+      margin-bottom: 5px;
+    }
+
+  }
+
+  &__name {
+    color: hsl(var(--base));
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 0px;
+    padding-left: 22px;
+    position: relative;
+    max-width: fit-content;
+    margin-inline: auto;
+
+    &::after {
+      content: '';
+      width: 16px;
+      height: 16px;
+      border: 1px solid hsl(var(--base)/0.2);
+      border-radius: 50%;
+      background-color: hsl(var(--base)/0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      position: absolute;
+
+
+    }
+
+    &::before {
+      content: '';
+      border-radius: 50%;
+      position: absolute;
+      left: 4px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 8px;
+      background-color: hsl(var(--base));
+      border: 1px solid hsl(var(--white));
+      box-shadow: 0 0 2px 2px #00000010;
+
+
+    }
+
+  }
+
+  &__desc {
+    max-width: 670px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+    font-size: clampCal(16px, 18px);
+  }
+
+  // Style left
+  &.style-left {
+    text-align: left;
+
+    .section-heading {
+
+      &__name,
+      &__title,
+      &__desc {
+        margin-left: 0;
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+
+/* ====================== Section Heading End ==================== */

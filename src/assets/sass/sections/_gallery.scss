@@ -1,0 +1,135 @@
+/* ======================  Story Section Start  ======================*/
+
+.custom-cursor.show {
+    opacity: 1;
+}
+
+.custom-cursor {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 9999px;
+    opacity: 0;
+    transform: translate(-9999px, -9999px);
+    will-change: transform, opacity;
+    transition: opacity .15s ease;
+    background-color: hsl(var(--black)/0.2);
+    width: 50px;
+    height: 50px;
+    color: hsl(var(--white));
+    border-radius: 100%;
+    backdrop-filter: blur(10px);
+    cursor: none;
+
+    &:hover {
+        color: hsl(var(--white));
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid hsl(var(--white));
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        transform: rotate(-45deg);
+
+        svg {
+            width: 25px;
+        }
+    }
+}
+
+
+
+.story-wrapper {
+    display: grid;
+    gap: 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "b1 s2 b3"
+        "b1 b2 b3"
+        "s1 b2 s3";
+
+    @include sm-screen {
+        grid-template-areas:
+            "s1 b2"
+            "b1 b2"
+            "b1 s2"
+            "s3 b3";
+    }
+
+    img {
+        object-fit: cover;
+        height: 100%;
+        border: 1px solid hsl(var(--border-color)/0.2);
+
+    }
+
+    &__item {
+        position: relative;
+        overflow: hidden;
+
+
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+            transition: all 0.3s linear;
+            backdrop-filter: blur(0px);
+
+        }
+
+        &:hover {
+            &::before {
+                height: 100%;
+                opacity: 0.5;
+                backdrop-filter: blur(2px);
+            }
+        }
+    }
+
+    .b1 {
+        grid-area: b1;
+    }
+
+    .b2 {
+        grid-area: b2;
+    }
+
+    .b3 {
+        grid-area: b3;
+
+        @include sm-screen {
+            width: 100%;
+            aspect-ratio: 2 / 1;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .s1 {
+        grid-area: s1;
+    }
+
+    .s2 {
+        grid-area: s2;
+    }
+
+    .s3 {
+        grid-area: s3;
+    }
+}
+
+
+
+
+/* ======================  Story Section End  ======================*/

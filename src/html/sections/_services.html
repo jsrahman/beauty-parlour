@@ -1,0 +1,58 @@
+<!--==========================  Services Section Start  ==========================-->
+<section class="services-section my-120">
+    <div class="container">
+        <div class="section-heading style-left flex-between  align-items-center gap-3">
+            <div class="section-heading__content">
+                <h5 class="section-heading__name">Our Services</h5>
+                <h2 class="section-heading__title mb-0">Experience the Best Barber & Haircut Services</h2>
+            </div>
+            <a href="#" class="btn btn-outline--base pill">
+                <span class="text">View All Services</span>
+                <span class="icon"><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+        </div>
+        <div class="row gy-4">
+            <div class="col-xl-3 col-md-4">
+                <div class="service-list nav-tabs" role="tablist">
+                    <a href="javascript:void(0)" class="service-list__item nav-link active" data-bs-toggle="tab" data-bs-target="#royal-shave">Royal shave</a>
+                    <a href="javascript:void(0)" class="service-list__item nav-link" data-bs-toggle="tab" data-bs-target="#beard-trim">Beard Trim</a>
+                    <a href="javascript:void(0)" class="service-list__item nav-link" data-bs-toggle="tab" data-bs-target="#mens-haircut">Men`s Haircut</a>
+                    <a href="javascript:void(0)" class="service-list__item nav-link" data-bs-toggle="tab" data-bs-target="#mustache-trim">Mustache Trim</a>
+                    <a href="javascript:void(0)" class="service-list__item nav-link" data-bs-toggle="tab" data-bs-target="#face-care">Face Care</a>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="tab-content" id="myTabContent">
+                    @@include('../components/_service-card.html',{
+                    id:"royal-shave",
+                    showContent:true,
+                    img:"../../assets/images/service/service-1.png",
+                    })
+                    @@include('../components/_service-card.html',{
+                    id:"beard-trim",
+                    showContent:false,
+                    img:"../../assets/images/service/service-2.png",
+                    })
+                    @@include('../components/_service-card.html',{
+                    id:"mens-haircut",
+                    showContent:false,
+                    img:"../../assets/images/service/service-3.png",
+                    })
+                    @@include('../components/_service-card.html',{
+                    id:"mustache-trim",
+                    showContent:false,
+                    img:"../../assets/images/service/service-4.png",
+                    })
+                    @@include('../components/_service-card.html',{
+                    id:"face-care",
+                    showContent:false,
+                    img:"../../assets/images/service/service-5.png",
+                    })
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--==========================  Services Section End  ==========================-->

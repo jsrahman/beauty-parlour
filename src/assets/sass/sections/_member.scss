@@ -1,0 +1,81 @@
+/* ======================  members Section Start  ======================*/
+
+
+.member-item {
+    position: relative;
+    z-index: 3;
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 425px;
+
+    @include msm-screen {
+        max-width: 100%;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 230px;
+        z-index: 1;
+        backdrop-filter: blur(20px);
+        mask-image: linear-gradient(to bottom, transparent 0%, hsl(var(--black)) calc(100% - 50%));
+    }
+
+    &__img {
+        img {
+            width: 100%;
+        }
+    }
+
+    &__play {
+        --play-width: 65px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: var(--play-width);
+        height: var(--play-width);
+        background-color: hsl(var(--white) / 0.15);
+        backdrop-filter: blur(2px);
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        color: hsl(var(--white));
+        font-size: rem(30px);
+    }
+
+    &__content {
+        position: absolute;
+        bottom: 0;
+        padding: 24px;
+        z-index: 2;
+
+        @include msm-screen {
+            padding: 10px;
+        }
+    }
+
+    &__desc {
+        @include line-clamp(3);
+        margin-bottom: 0;
+        color: hsl(var(--white));
+        font-weight: 600;
+    }
+
+    &__name {
+        margin-top: 15px;
+        margin-bottom: 0;
+        color: hsl(var(--white));
+        font-weight: 600;
+    }
+
+    &__designation {
+        color: hsl(var(--white));
+    }
+}
+
+/* ======================  members Section End  ======================*/

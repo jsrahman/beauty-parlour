@@ -1,0 +1,87 @@
+/* ================= Slick Arrow & Dots css Start ================ */
+.slick-initialized.slick-slider {
+  margin: 0 -10px;
+
+  .slick-track {
+    display: flex;
+  }
+
+  .slick-slide {
+    height: auto;
+    padding: 0 10px;
+
+    >div {
+      height: 100%;
+    }
+  }
+}
+
+.slick-arrow {
+  position: absolute;
+  z-index: 1;
+  top: -4px;
+  color: hsl(var(--white));
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: 0.2s linear;
+  background-color: hsl(var(--black));
+  color: hsl(var(--white));
+  font-size: 16px;
+
+  &:hover {
+    background: hsl(var(--base)) !important;
+  }
+}
+
+.slick-next {
+  right: calc(50% - 200px);
+
+}
+
+.slick-prev {
+  left: calc(50% - 200px);
+
+}
+
+/* -------------- Slick Slider Arrow Style two ------------  */
+
+/* Dots Css Start */
+.slick-dots {
+  text-align: center;
+  padding-top: 30px;
+  line-height: 0;
+
+  li {
+    display: inline-block;
+    line-height: 0;
+
+
+    button {
+      line-height: 0;
+      border: none;
+      background-color: hsl(var(--black));
+      color: hsl(var(--white));
+      margin: 0 3px;
+      width: 8px;
+      height: 8px;
+      border-radius: 1px;
+      border-radius: 50%;
+      text-indent: -9999px;
+      transition: 0.3s linear;
+    }
+
+    &.slick-active button {
+      background-color: hsl(var(--base));
+      width: 25px;
+      border-radius: 5px;
+      color: hsl(var(--base));
+    }
+  }
+}
+
+/* Dots Css End */
+/* ================= Slick Arrow & Dots css Start ================ */

@@ -1,0 +1,82 @@
+<!-- ==================== Header Start Here (Bootstrap Offcanvas) ==================== -->
+<header class="header" id="header">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand logo" href="index.html">
+                <img src="assets/images/logo/logo-dark.png" alt="logo">
+            </a>
+
+            <!-- Offcanvas toggler -->
+            <button class="navbar-toggler header-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span id="hiddenNav"><i class="las la-bars"></i></span>
+            </button>
+
+            <!-- Offcanvas menu -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <a class="navbar-brand logo" href="index.html">
+                        <img class="d-none d-lg-block" src="assets/images/logo/logo.png" alt="">
+                        <img class="d-lg-none" src="assets/images/logo/logo-dark.png" alt="">
+                    </a>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+
+                <div class="offcanvas-body ">
+                    <ul class="navbar-nav nav-menu mx-auto align-items-lg-center">
+                        <li class="nav-item active">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Dashboard</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Blog
+                                <span class="nav-item__icon"><i class="las la-angle-down"></i></span></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-menu__list"><a class="dropdown-item dropdown-menu__link" href="blog.html">Blog</a></li>
+                                <li class="dropdown-menu__list"><a class="dropdown-item dropdown-menu__link" href="#">Blog Details</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+
+                    <div class="login-btn d-flex justify-content-between">
+                        <a href="login.html" class="btn btn--base pill align-self-center">
+                            <span class="text">
+                                Login
+                            </span>
+
+                            <span class="icon">
+                                <i class="fa-solid fa-arrow-right ms-2"></i>
+                            </span>
+                        </a>
+                        <div class="custom-lang-dropdown d-lg-none">
+                            <div class="custom-dropdown">
+                                <div class="custom-dropdown__selected">
+                                    <span class="thumb"> <img class="custom-dropdown__img" src="../../assets/images/flag/bd.png" alt="img"></span>
+                                    <span class="text">Bangla</span>
+                                </div>
+                                <ul class="custom-dropdown__list">
+                                    <li class="custom-dropdown__list-item langChange" data-value="hn">
+                                        <span class="thumb"> <img class="custom-dropdown__img" src="../../assets/images/flag/af.png" alt="img"></span>
+                                        <span class="text">Hindi</span>
+                                    </li>
+                                    <li class="custom-dropdown__list-item langChange selected" data-value="bn">
+                                        <span class="thumb"> <img class="custom-dropdown__img" src="../../assets/images/flag/kh.png" alt="img"></span>
+                                        <span class="text">Bangla</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<!-- ==================== Header End Here ==================== -->

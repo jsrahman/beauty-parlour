@@ -1,0 +1,84 @@
+@@include('../layout/_template-top.html')
+@@include('../layout/_header.html')
+<main>
+    @@include('../layout/_breadcrumb.html', {
+    "title": "Book an appointment",
+    "desc": "Book an appointment with our team of experts to get started with your barber shop."
+    })
+    <section class="booking-process my-120">
+        <div class="container">
+            <div class="service">
+                <div class="add-service__header">
+                    <ul class="add-service__steps">
+                        <li class="add-service__step">
+                            <span class="add-service__step-number "></span>
+                            <span class="add-service__step-text">Service</span>
+                        </li>
+                        <li class="add-service__step">
+                            <span class="add-service__step-number"></span>
+                            <span class="add-service__step-text">Time Slot</span>
+                        </li>
+                        <li class="add-service__step">
+                            <span class="add-service__step-number"></span>
+                            <span class="add-service__step-text">Stylish</span>
+                        </li>
+                        <li class="add-service__step active">
+                            <span class="add-service__step-number"></span>
+                            <span class="add-service__step-text">Review &amp; confirm</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="add-service__body">
+                    <div class="confirm-card">
+                        <div class="confirm-card__header">
+                            <div class="confirm-card__thumb">
+                                <span class="thumb-item">
+                                    <img src="../../assets/images/service/service-1.png" alt="">
+                                </span>
+                                <span class="thumb-item">
+                                    <img src="../../assets/images/service/service-2.png" alt="">
+                                </span>
+                                <span class="thumb-item">
+                                    <img src="../../assets/images/service/service-3.png" alt="">
+                                </span>
+                            </div>
+                            <div class="confirm-card__info">
+                                <p class="title">2 Serivice</p>
+                                <div class="desc">
+                                    <span class="price"> <Strong>Total: </Strong> $115</span>
+                                    <span class="time">1Hr 15min</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="confirm-card__body">
+                            <div class="confirm-item">
+                                <div class="confirm_info">
+                                    <span class="name">Haircut</span>
+                                    <span class="desc">with any staff</span>
+                                </div>
+                                <span class="confirm_price">$50.00</span>
+                            </div>
+                            <div class="confirm-item">
+                                <div class="confirm_info">
+                                    <span class="name">Haircut</span>
+                                    <span class="desc">with any staff</span>
+                                </div>
+                                <span class="confirm_price">$50.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="add-service__footer">
+                    <a href="booking.html" class="btn btn-outline--base">Back</a>
+                    <a href="booking-stylish.html" class="btn btn--base flex-align gap-2">Continue
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+<!-- Footer -->
+@@include('../layout/_footer.html')
+@@include('../layout/_template-bottom.html')

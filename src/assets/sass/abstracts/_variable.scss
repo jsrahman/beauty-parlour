@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rufina:wght@400;700&display=swap');
+
+/* ========================= Css Variables Start ======================== */
+:root {
+  /* Font Family */
+  --heading-font: 'Rufina', serif;
+  --body-font: 'Nunito Sans', sans-serif;
+
+  /* ========================= Theme Color Start ============================= */
+
+  /* Base Color */
+  @include colorVariable(--base, #f17c8f, 10);
+
+  /* Base Two Color */
+  @include colorVariable(--base-two, #D4AF37, 10);
+
+  /* ========================= Theme Color End ============================= */
+
+  /* ========================= Color Variables Start =========================== */
+  // White Color
+  @include colorVariable(--white, #ffffff);
+
+  // Body Color
+  @include colorVariable(--body-color, #19191b);
+
+  // heading-color
+  @include colorVariable(--heading-color, #332d28);
+
+  // Black Color
+  @include colorVariable(--black, #000);
+
+  //Border Color
+  @include colorVariable(--border-color, #e0e0e0);
+
+  // Section Background
+  @include colorVariable(--section-bg, #f3eee9);
+
+  --base-50: color-mix(in oklab, hsl(var(--base)), hsl(var(--white)) 95%);
+  --base-700: color-mix(in oklab, hsl(var(--base-d-100)), hsl(var(--black)) 13%);
+  --base-900: color-mix(in oklab, hsl(var(--base)), hsl(var(--black)) 41%);
+  --base-rgb: linear-gradient(220deg, var(--base-700) 0%, var(--base-900) 55%, var(--base-700) 90%);
+
+  --background-color: var(--black);
+  /* ======================  Natural color Variable Start  ======================*/
+  @include colorVariable(--neutral-00, #FFFFFF);
+  @include colorVariable(--neutral-50, #FAFAFA);
+  @include colorVariable(--neutral-100, #F4F4F5);
+  @include colorVariable(--neutral-200, #E4E4E7);
+  @include colorVariable(--neutral-300, #D4D4D8);
+  @include colorVariable(--neutral-400, #A1A1AA);
+  @include colorVariable(--neutral-500, #71717A);
+  @include colorVariable(--neutral-600, #52525B);
+  @include colorVariable(--neutral-700, #3F3F46);
+  @include colorVariable(--neutral-800, #27272A);
+  @include colorVariable(--neutral-900, #18181B);
+  @include colorVariable(--neutral-950, #09090B);
+
+  /* ================================ Box Shadow Start =============================== */
+  // Header Box shadow
+  --header-box-shadow: 0px -1px 15px 3px hsl(var(--black) / 0.3);
+  // Mobile bottom fix menu box shadow
+  --mobile-box-shadow: 0px -1px 5px 0px hsl(var(--black) / 0.92);
+  // Card box shadow
+  --box-shadow: 0px 2px 15px hsl(var(--black) / 0.05);
+  /* ================================ Box Shadow End =============================== */
+
+  /* ============================== Bootstrap Modifier Start ============================== */
+  /* Primary Color */
+  @include colorVariable(--primary, #0007cc, 5);
+
+  /* Secondary Color */
+  @include colorVariable(--secondary, #6d767e, 5);
+
+  /* Success Color */
+  @include colorVariable(--success, #1bcc00, 5);
+
+  /* Danger Color */
+  @include colorVariable(--danger, #fb4646, 5);
+
+  /* Warning Color */
+  @include colorVariable(--warning, #eb9c00, 5);
+
+  /* Info Color */
+  @include colorVariable(--info, #00bbff, 5);
+
+  /* dark Color */
+  @include colorVariable(--dark, #36454F, 5);
+
+  /* ============================== Bootstrap Modifier End ============================== */
+
+  /* ============================== Dark Mood Color Modify Start ============================== */
+  [data-theme='dark'] {
+    // Reverse White
+    @include colorVariable(--white, #101213);
+
+    // Reverse Black
+    @include colorVariable(--black, #f8fafc);
+  }
+
+  /* ============================== Dark Mood Color Modify End ============================== */
+}
+
+/* ========================= Css Variables End =========================== */

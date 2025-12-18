@@ -1,0 +1,104 @@
+@@include('../layout/_template-top.html')
+@@include('../layout/_header.html')
+<main>
+    @@include('../layout/_breadcrumb.html', {
+    "title": "Book an appointment",
+    "desc": "Book an appointment with our team of experts to get started with your barber shop."
+    })
+    <section class="booking-process my-120">
+        <div class="container">
+            <div class="service">
+                <div class="add-service__header">
+                    <ul class="add-service__steps">
+                        <li class="add-service__step">
+                            <span class="add-service__step-number "></span>
+                            <span class="add-service__step-text">Service</span>
+                        </li>
+                        <li class="add-service__step">
+                            <span class="add-service__step-number"></span>
+                            <span class="add-service__step-text">Time Slot</span>
+                        </li>
+                        <li class="add-service__step active ">
+                            <span class="add-service__step-number"></span>
+                            <span class="add-service__step-text">Stylish</span>
+                        </li>
+                        <li class="add-service__step ">
+                            <span class="add-service__step-number"></span>
+                            <span class="add-service__step-text">Review &amp; confirm</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="add-service__body">
+                    <form class="stylish-list">
+                        <label for="stylish-1" class="stylish-item">
+                            <span class="thumb">
+                                <img src="../../assets/images/team/1.jpg" alt="Stylist John Doe">
+                            </span>
+                            <span class="content">
+                                <span class="name">John Doe</span>
+                                <span class="degignation">Master Barber</span>
+                                <span class="desc">Specializing in classic cuts and modern fades. With 10+ years experience.</span>
+                            </span>
+                            <span class="check">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <input type="radio" name="selected_stylish" id="stylish-1" class="d-none" value="John Doe">
+                        </label>
+                        <label for="stylish-2" class="stylish-item">
+                            <span class="thumb">
+                                <img src="../../assets/images/team/2.jpg" alt="Stylist Jane Smith">
+                            </span>
+                            <span class="content">
+                                <span class="name">Jane Smith</span>
+                                <span class="degignation">Senior Stylist</span>
+                                <span class="desc">Expert in women's short hair and intricate designs. Creative and precise.</span>
+                            </span>
+                            <span class="check">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <input type="radio" name="selected_stylish" id="stylish-2" class="d-none" value="Jane Smith">
+                        </label>
+                        <label for="stylish-3" class="stylish-item">
+                            <span class="thumb">
+                                <img src="../../assets/images/team/3.jpg" alt="Stylist Mike Johnson">
+                            </span>
+                            <span class="content">
+                                <span class="name">Mike Johnson</span>
+                                <span class="degignation">Apprentice Barber</span>
+                                <span class="desc">Passionate about learning and delivering fresh, clean looks.</span>
+                            </span>
+                            <span class="check">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <input type="radio" name="selected_stylish" id="stylish-3" class="d-none" value="Mike Johnson">
+                        </label>
+                        <label for="stylish-4" class="stylish-item">
+                            <span class="thumb">
+                                <img src="../../assets/images/team/4.jpg" alt="Stylist Emily White">
+                            </span>
+                            <span class="content">
+                                <span class="name">Emily White</span>
+                                <span class="degignation">Color Specialist</span>
+                                <span class="desc">Transforming hair with vibrant colors and highlights.</span>
+                            </span>
+                            <span class="check">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <input type="radio" name="selected_stylish" id="stylish-4" class="d-none" value="Emily White">
+                        </label>
+                    </form>
+                </div>
+                <div class="add-service__footer">
+                    <a href="booking-time.html" class="btn btn-outline--base">Back</a>
+                    <a href="booking-review.html" class="btn btn--base flex-align gap-2">Continue
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+<!-- Footer -->
+@@include('../layout/_footer.html')
+@@include('../layout/_template-bottom.html')

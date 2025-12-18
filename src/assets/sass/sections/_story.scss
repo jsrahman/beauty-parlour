@@ -1,0 +1,35 @@
+/* ======================  Story Section Start  ======================*/
+.story-section {}
+
+.story-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 32px;
+
+    .story-item {
+        padding-left: 120px;
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 80px;
+            height: 2px;
+            background-color: hsl(var(--base));
+            top: 14px;
+        }
+
+        &__year {
+            font-size: clampCal(16px, 32px);
+            font-weight: 600;
+            margin-bottom: 10px;
+
+        }
+    }
+
+
+}
+
+/* ======================  Story Section End  ======================*/
