@@ -1,36 +1,26 @@
 /* ======================  highlight-card Section Start  ======================*/
 .highlight-card-section {
-    background: hsl(var(--black));
+    background-repeat: no-repeat !important;
+    background-size: 550px !important;
+    background-position: bottom center !important;
 
-    .section-heading__name {
-        color: hsl(var(--base-l-400));
-
-        &::after {
-            border: 1px solid hsl(var(--white) / 0.2);
-            background-color: hsl(var(--white) / 0.1);
-        }
-    }
-
-    .section-heading__title,
-    .section-heading__desc {
-        color: hsl(var(--white));
-    }
 
     .highlight-card {
         display: flex;
         gap: 20px;
         border-radius: 16px;
         height: 100%;
-        text-align: right;
-        flex-direction: row-reverse;
+        text-align: left;
         align-items: center;
         max-width: 375px;
         margin-left: auto;
+        background-color: hsl(var(--white)/0.5);
+        backdrop-filter: blur(10px);
 
         @include md-screen {
             text-align: left;
             padding: 12px;
-            gap: 10px;
+            gap: 6px;
             flex-direction: row;
             margin-left: 0;
         }
@@ -38,7 +28,7 @@
         &-item {
             display: flex;
             flex-direction: column;
-            gap: 110px;
+            gap: 56px;
 
             @include lg-screen {
                 gap: 80px;
@@ -55,7 +45,7 @@
 
 
         &__thumb {
-            --size: 50px;
+            --size: 55px;
             align-items: flex-start;
             flex-shrink: 0;
             height: var(--size);
@@ -65,46 +55,18 @@
             justify-content: center;
             position: relative;
 
-
-
-
-            &::before {
-                content: '';
-                position: absolute;
-                bottom: -15px;
-                right: 0;
-                width: var(--size);
-                height: 2px;
-                background-color: hsl(var(--white)/0.8);
-
-                @include md-screen {
-                    bottom: -5px;
-                }
-
-            }
-
             img {
                 width: 100%;
                 height: 100%;
             }
 
             @include md-screen {
-                --size: 60px;
-
-                img {
-                    width: 30px;
-                    height: 30px;
-                }
+                --size: 45px;
             }
 
 
             @include sm-screen {
-                --size: 55px;
-
-                img {
-                    width: 25px;
-                    height: 25px;
-                }
+                --size: 35px;
             }
         }
 
@@ -113,10 +75,24 @@
         }
 
         &__title {
-            font-size: 26px;
+            font-size: 24px;
             margin-bottom: 10px;
+            padding-bottom: 2px;
             font-weight: 600;
-            color: hsl(var(--white));
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 10%;
+                height: 1px;
+                background-color: hsl(var(--base));
+
+            }
+
+            ;
 
             @include lg-screen {
                 font-size: 22px;
@@ -128,10 +104,9 @@
         }
 
         &__desc {
-            color: hsl(var(--white)/0.9);
             font-size: 16px;
-            font-weight: 300;
-
+            font-weight: 400;
+            @include line-clamp(2)
         }
 
     }
@@ -143,25 +118,26 @@
         @include md-screen {
             display: none;
         }
-
-
-        &::before {
-            content: '';
-            background-image: linear-gradient(#0000, #000000b3 41%, #000);
-            height: 40%;
-            position: absolute;
-            bottom: 0%;
-            left: 0%;
-            right: 0%;
-
-        }
     }
 
     .last-list {
         .highlight-card {
-            flex-direction: row;
+            text-align: right;
+            flex-direction: row-reverse;
             margin-left: 0px;
-            text-align: left;
+
+            &__title {
+                text-align: right;
+
+                &::before {
+                    right: 0;
+                    left: auto;
+                }
+            }
+
+            &__desc {
+                text-align: right;
+            }
         }
     }
 }

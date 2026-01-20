@@ -33,7 +33,7 @@
   @include colorVariable(--border-color, #e0e0e0);
 
   // Section Background
-  @include colorVariable(--section-bg, #f3eee9);
+  @include colorVariable(--section-bg, #fbf9f7);
 
   --base-50: color-mix(in oklab, hsl(var(--base)), hsl(var(--white)) 95%);
   --base-700: color-mix(in oklab, hsl(var(--base-d-100)), hsl(var(--black)) 13%);

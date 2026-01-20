@@ -4,55 +4,20 @@
   z-index: 1;
 
 
-  @include md-screen {
-    --contentPadding: 30px;
-  }
-
-  @include sm-screen {
-    --contentPadding: 24px;
-  }
-
-  @include msm-screen {
-    --contentPadding: 18px;
-  }
-
-  &::before {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    top: -60px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.18;
-    background-image:
-      linear-gradient(to right, hsl(var(--base)/0.3) 1px, transparent 1px),
-      linear-gradient(to bottom, hsl(var(--base)/0.3) 1px, transparent 1px);
-    background-size: 20px 20px;
-    mask-image: radial-gradient(ellipse 50% 45% at 50% 0%, #000 60%, transparent 100%);
-  }
 }
 
 
 
+
 .testimonial-card {
-  display: flex;
-  border-radius: 32px;
-  max-width: 1096px;
+  border-radius: 10px;
   overflow: hidden;
   margin-inline: auto;
+  background-color: hsl(var(--white));
+  padding: 12px;
+  margin-bottom: var(--bs-gutter-x);
 
-  &:hover {
-    .testimonial-card__thumb img {
-      filter: grayscale(0);
-    }
-  }
-
-
-  &__content {
-    padding-left: var(--contentPadding);
-    padding-top: var(--contentPadding);
-  }
+  &__content {}
 
   &__header {
     display: flex;
@@ -60,16 +25,12 @@
     gap: 30px;
     flex-wrap: wrap;
     margin-bottom: 25px;
+    justify-content: space-between;
 
-    .time {
-      background-color: hsl(var(--base)/0.08);
-      color: hsl(var(--base-d-400));
-      letter-spacing: .8px;
-      border-radius: 100px;
-      padding: 2px 8px 2px 12px;
-      font-size: 16px;
-      font-weight: 600;
-      line-height: 20px;
+    &-inner {
+      display: flex;
+      align-items: center;
+      gap: 20px;
     }
 
     .rate {
@@ -95,10 +56,13 @@
 
   &__desc {
     color: #001124;
-    font-size: clampCal(18px, 27px);
-    font-weight: 500;
-    line-height: 1.33;
-    margin-bottom: 64px;
+    font-size: clampCal(14, 16);
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 0px;
+    padding: 10px;
+    border-radius: inherit;
+    background-color: hsl(var(--section-bg)/0.8);
 
     @include lg-screen {
       margin-bottom: 40px;
@@ -127,114 +91,26 @@
     line-height: 1.3;
   }
 
-  &__position {
-    color: #536274;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.14;
-  }
+
 
   &__thumb {
-    --s: 305px;
+    --s: 45px;
     flex-shrink: 0;
     position: relative;
     width: var(--s);
     height: var(--s);
     border-radius: 100%;
 
-
-
-    @include sm-screen {
-      display: none;
-    }
-
     img {
       height: 100%;
       width: 100%;
       object-fit: cover;
       border-radius: inherit;
-      filter: grayscale(100%);
-      transition: filter 0.3s;
     }
 
-    .quote-icon {
-      --s: 80px;
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: var(--s);
-      height: var(--s);
-      border-radius: 100%;
-      font-size: 48px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #fff;
-
-      svg {
-        width: 48px;
-        aspect-ratio: 1/1;
-      }
-
-    }
   }
 }
 
 .testimonial-slider-container {
-  position: relative;
-}
-
-.testimonial-slider__arrow {
-  position: static;
-  right: var(--contentPadding);
-  bottom: var(--contentPadding);
-
-  margin-top: 16px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-
-
-  >span {
-    --w: 45px;
-    width: var(--w);
-    height: var(--w);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid hsl(var(--border-color));
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 18px;
-    z-index: 1;
-    background-color: hsl(var(--white));
-    position: static;
-    color: hsl(var(--black));
-
-
-    i {
-      transition: all 0.3s ease;
-    }
-
-    &:hover {
-      background-color: hsl(var(--base));
-      color: hsl(var(--white));
-    }
-
-  }
-
-  @include md-screen {
-    margin-top: 12px;
-  }
-
-  @include sm-screen {
-    margin-top: 10px;
-  }
-
-  &-btn {
-    @include msm-screen {
-      display: none !important;
-    }
-  }
+  .col-md-4 {}
 }

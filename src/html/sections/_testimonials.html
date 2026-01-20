@@ -1,34 +1,49 @@
 <!--==========================  Testimonials Section Start  ==========================-->
-<section class="testimonials-section my-120 pt-3 overflow-hidden">
+<section class="testimonials-section py-120 overflow-hidden section-bg">
     <div class="container">
         <div class="section-heading">
             <h5 class="section-heading__name">
                 Our Reviews
             </h5>
-            <h2 class="section-heading__title mt-auto">What Our Customer Says</h2>
+            <h2 class="section-heading__title mt-auto">What Customer Says</h2>
             <p class="section-heading__desc">Yes, our POS works on mobile, web, and PWA, allowing seamless access across different devices.</p>
         </div>
         <div class="testimonial-slider-container">
 
             <div class="testimonial-slider">
-                @@include("../components/_testimonial-slider.html",{
-                img:'05.png',
-                })
-                @@include("../components/_testimonial-slider.html",{
-                img:'02.png',
-                })
-                @@include("../components/_testimonial-slider.html",{
-                img:'03.png',
-                })
-                @@include("../components/_testimonial-slider.html",{
-                img:'04.png',
-                })
-                @@include("../components/_testimonial-slider.html",{
-                img:'01.png',
-                })
-                @@include("../components/_testimonial-slider.html",{
-                img:'06.png',
-                })
+
+                <div class="row gx-4 justify-content-center align-items-start">
+                    <div class="col-md-4">
+                        @@include("../components/_testimonial-slider.html",{
+                        img:'05.png',
+                        desc:"“Laravel Cloud makes it easy to demo projects . I can deploy a fresh app in seconds. You only pay for what you use, letting you focus on business value instead of infrastructure. ”"
+                        })
+                        @@include("../components/_testimonial-slider.html",{
+                        img:'02.png',
+                        desc:"“Laravel Cloud makes it easy to demo projects . I can deploy a fresh app in seconds. You only pay for what you use, letting you focus on business value instead of infrastructure. ”"
+                        })
+                    </div>
+                    <div class="col-md-4">
+                        @@include("../components/_testimonial-slider.html",{
+                        img:'03.png',
+                        desc:"“Laravel Cloud makes it easy to demo projects . Laravel Cloud makes it easy to demo projects . I can deploy a fresh app in seconds. You only pay for what you use, letting you focus on business value instead of infrastructure. ”"
+                        })
+                        @@include("../components/_testimonial-slider.html",{
+                        img:'04.png',
+                        desc:"“Laravel Cloud makes it easy to demo projects . I can deploy a fresh app in seconds. You only pay for what you use.”"
+                        })
+                    </div>
+                    <div class="col-md-4 ">
+                        @@include("../components/_testimonial-slider.html",{
+                        img:'01.png',
+                        desc:"“Laravel Cloud makes it easy to demo projects . I can deploy a fresh app in seconds. You only pay for what you use, letting you focus on business value instead of infrastructure. ”"
+                        })
+                        @@include("../components/_testimonial-slider.html",{
+                        img:'06.png',
+                        desc:"“Laravel Cloud makes it easy to demo projects . I can deploy a fresh app in seconds. You only pay for what you use, letting you focus on business value instead of infrastructure. ”"
+                        })
+                    </div>
+                </div>
             </div>
         </div>
     </div>

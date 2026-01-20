@@ -109,6 +109,39 @@
     font-size: clampCal(16px, 18px);
   }
 
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .slider-btn-list {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      button {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        background-color: hsl(var(--base)/0.1);
+        border: 1px solid hsl(var(--base)/0.4);
+        color: hsl(var(--base));
+        font-size: 18px;
+
+        &:hover {
+          background-color: hsl(var(--base)/0.2);
+          border-color: hsl(var(--base)/0.8);
+        }
+
+      }
+
+    }
+  }
+
   // Style left
   &.style-left {
     text-align: left;
