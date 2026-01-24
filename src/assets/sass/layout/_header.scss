@@ -5,6 +5,14 @@
   position: absolute;
   top: 20px;
 
+  .logo-light {
+    display: none;
+  }
+
+  .logo-dark {
+    display: block;
+  }
+
   &.fixed-header {
     position: fixed;
     top: 0px;
@@ -535,3 +543,38 @@
 }
 
 /* ======================  custom dropdown End  ======================*/
+
+
+body:has(.common-banner) {
+  .header:not(.fixed-header) {
+    .logo-light {
+      display: block !important;
+    }
+
+    .logo-dark {
+      display: none !important;
+    }
+
+    .nav-menu .nav-item {
+      .nav-link {
+        color: hsl(var(--white)) !important;
+      }
+
+      &:hover,
+      &.active {
+        .nav-link {
+          color: hsl(var(--base-d-400)) !important;
+
+          &::before {
+            background-color: hsl(var(--base-d-400));
+          }
+
+        }
+      }
+    }
+
+    .nav-menu::after {
+      background-color: hsl(var(--white)/0.25);
+    }
+  }
+}
