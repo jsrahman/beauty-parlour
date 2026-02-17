@@ -15,14 +15,13 @@
       this.clientSlider();
       this.teamSlider();
       this.memberSlider();
-      this.serviceSlider();
       this.activeOdometer();
       this.sectionSubheadingBg();
+      this.activeAos();
 
       //! Project Owner Preference
       this.hideNavbar();
       this.sidebarDropdown();
-      this.userDropdown();
       this.sidebarOverlay();
       this.customDropdown();
       this.activeApexBarChat();
@@ -77,7 +76,7 @@
     },
 
     backgroundImage() {
-      $("[data-background-image]").css("background-image", function () {
+      $(".bg-img").css("background-image", function () {
         return `url(${$(this).data("background-image")})`;
       });
     },
@@ -162,8 +161,6 @@
     },
 
     testimonialSlider() {
-      // todo: if don't need remove this code.
-      return;
       const testimonialSliderConfig = {
         slidesToScroll: 1,
         autoplay: false,
@@ -294,24 +291,6 @@
         ],
       });
     },
-
-    serviceSlider() {
-      const sliderConfig = {
-        slidesToScroll: 1,
-        autoplay: false,
-        autoplaySpeed: 2000,
-        speed: 1500,
-        dots: true,
-        pauseOnHover: true,
-        arrows: false,
-      };
-      $(".service-list").slick({
-        ...sliderConfig,
-        slidesToShow: 3,
-        dots: false,
-      });
-    },
-
     teamSlider() {
       const sliderConfig = {
         slidesToScroll: 1,
@@ -507,16 +486,6 @@
         }
       });
     },
-    userDropdown() {
-      $(".user-info__button").on("click", function () {
-        $(".user-info-dropdown").toggleClass("show");
-      });
-      $(".user-info__button").attr("tabindex", -1).focus();
-
-      $(".user-info__button").on("focusout", function () {
-        $(".user-info-dropdown").removeClass("show");
-      });
-    },
     sidebarOverlay() {
       $(".navigation-bar").on("click", function () {
         $(".sidebar-menu").addClass("show-sidebar");
@@ -529,6 +498,20 @@
         if (bg) {
           $(this).css("--data-bg", bg);
         }
+      });
+    },
+    activeAos() {
+      document.querySelectorAll(".section-heading").forEach((el) => {
+        Array.from(el.children).forEach((child) => {
+          child.setAttribute("data-aos", "fade-up");
+        });
+      });
+      AOS.init({
+        once: true,
+        duration: 800,
+        offset: 50,
+        useClassNames: true,
+        animatedClassName: "section-heading",
       });
     },
     customCursor() {

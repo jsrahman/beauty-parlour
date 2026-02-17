@@ -4,6 +4,15 @@
   min-height: 100dvh;
   position: relative;
 
+  .testimonial-card {
+    background: hsl(var(--white)/0.15);
+    backdrop-filter: blur(10px);
+
+    &__desc {
+      background-color: transparent;
+    }
+  }
+
 
   .slick-slide>div {
     display: flex;

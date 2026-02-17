@@ -1,286 +1,46 @@
-/* ================================ Frequently Asked Questions Css Start ============================= */
+/* ======================  Faq Section Start  ======================*/
+section.faq-section {
+    .section-heading {
+        margin-bottom: 40px;
+    }
+}
 
-.faq-item {
-    position: relative;
-    border: 1px solid hsl(var(--border-color));
-    border-radius: 20px;
+.more-question {
+    border-radius: 24px;
+    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.01) inset;
+    background: var(--base-50);
     padding: 24px;
-    height: 100%;
-    display: flex;
-}
-
-@media screen and (max-width: 991px) {
-    .faq-item {
-        padding: 20px 15px;
-        border-radius: 15px;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .faq-item {
-        height: auto;
-    }
-}
-
-@media screen and (max-width: 424px) {
-    .faq-item {
-        border-radius: 10px;
-    }
-}
-
-.faq-item__icon {
-    width: 40px;
-    height: 40px;
-    border: 1px solid hsl(var(--border-color));
-    border-radius: 8px;
-    color: hsl(var(--heading-color));
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-}
-
-@media screen and (max-width: 991px) {
-    .faq-item__icon {
-        width: 35px;
-        height: 35px;
-    }
-}
-
-.faq-item__icon svg {
-    width: 20px;
-    height: 20px;
-}
-
-@media screen and (max-width: 991px) {
-    .faq-item__icon svg {
-        width: 18px;
-        height: 18px;
-    }
-}
-
-.faq-item__content {
-    width: calc(100% - 40px);
-    padding-left: 12px;
-}
-
-.faq-item__title {
-    margin-bottom: 7px;
-    font-weight: 500;
-    font-size: 24px;
-
-    @include lg-screen {
-        font-size: 22px;
-    }
+    margin-top: 40px;
 
     @include sm-screen {
-        font-size: 20px;
+        flex-wrap: wrap !important;
+        margin-top: 30px;
+        padding: 16px;
+        border-radius: 15px;
+    }
+
+    &__content {
+        flex: 1;
+
+        @include sm-screen {
+            flex-basis: 100%;
+        }
+    }
+
+    &__desc {
+        color: hsl(var(--neutral-600));
+
+    }
+
+    &__title {
+        color: hsl(var(--neutral-900));
+        font-weight: 600;
+        margin-bottom: 8px;
     }
 }
 
-.faq-item__desc {
-    font-weight: 300;
-}
-
-@media screen and (max-width: 575px) {
-    .faq-item__title {
-        margin-bottom: 5px;
-    }
-}
-
-.faq-load-more {
-    position: relative;
-    margin-top: 5px;
-    margin-bottom: 40px;
-}
-
-@media screen and (max-width: 991px) {
-    .faq-load-more {
-        margin-bottom: 35px;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .faq-load-more {
-        margin-bottom: 30px;
-    }
-}
-
-@media screen and (max-width: 575px) {
-    .faq-load-more {
-        margin-bottom: 25px;
-    }
-}
-
-@media screen and (max-width: 424px) {
-    .faq-load-more {
-        margin-top: 3px;
-        margin-bottom: 20px;
-    }
-}
-
-.faq-load-more::after {
-    position: absolute;
-    content: "";
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(59.03%, #FFF));
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFF 59.03%);
-    width: 100%;
-    height: 155px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 2;
-}
-
-.faq-load-more .btn {
-    z-index: 3;
-}
-
-.faq-contact {
-    position: relative;
-    border: 1px solid hsl(var(--border-color));
-    border-radius: 20px;
-    padding: 30px 24px;
-    display: flex;
-    justify-content: space-between;
-}
-
-@media screen and (max-width: 767px) {
-    .faq-contact {
-        padding: 20px 15px;
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-@media screen and (max-width: 424px) {
-    .faq-contact {
-        padding: 15px 10px;
-    }
-}
-
-@media screen and (max-width: 1199px) {
-    .faq-contact__left {
-        max-width: 540px;
-    }
-}
-
-@media screen and (max-width: 991px) {
-    .faq-contact__left {
-        max-width: 385px;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .faq-contact__left {
-        max-width: 100%;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-}
-
-.faq-contact__left {
-    display: flex;
-}
-
-.faq-contact__left .thumb {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 3px solid hsl(var(--base));
-    padding: 5px;
-}
 
 
-@media screen and (max-width: 767px) {
-    .faq-contact__left .thumb {
-        display: none;
-    }
-}
 
-.faq-contact__left .thumb img {
-    width: 100%;
-    height: 100%;
-}
 
-.faq-contact__left .content {
-    width: calc(100% - 48px);
-    padding-left: 30px;
-}
-
-@media screen and (max-width: 1199px) {
-    .faq-contact__left .content {
-        padding-left: 20px;
-    }
-}
-
-@media screen and (max-width: 991px) {
-    .faq-contact__left .content {
-        padding-left: 12px;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .faq-contact__left .content {
-        width: 100%;
-        padding-left: 0;
-    }
-}
-
-.faq-contact__left .title {
-    margin-bottom: 2px;
-}
-
-@media screen and (max-width: 1199px) {
-    .faq-contact__left .desc {
-        line-height: 1.3;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .faq-contact__left .desc {
-        font-size: 14px;
-    }
-}
-
-.faq-contact__left .desc .link {
-    color: inherit;
-    line-height: inherit;
-    font-weight: inherit;
-    text-decoration: underline;
-}
-
-.faq-contact__left .desc .link:hover {
-    color: hsl(var(--base));
-}
-
-.faq-contact__right {
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-    gap: 15px;
-}
-
-@media screen and (max-width: 991px) {
-    .faq-contact__right {
-        gap: 10px;
-        text-align: center;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .faq-contact__right {
-        width: 100%;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-    }
-}
-
-/* ================================ Frequently Asked Questions Css End ============================= */
+/* ======================  Faq Section End  ======================*/

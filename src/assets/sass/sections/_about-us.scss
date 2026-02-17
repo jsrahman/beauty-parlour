@@ -7,26 +7,52 @@
         align-items: center;
         position: relative;
 
+        @include md-screen {
+            width: 100%;
+        }
+
         &__img {
             height: 100%;
             border-radius: 10px;
+            border-top-left-radius: 200px;
             border: 2px solid hsl(var(--base));
             overflow: hidden;
 
-            img {
-                height: 100%;
-                object-fit: cover;
+
+
+
+            @include md-screen {
+                max-height: 350px;
+                width: 100%;
+                border-top-left-radius: 100px;
             }
 
-            &.thumb-1 {
-                height: calc(100% - 120px);
+            img {
+
+
+                @include md-screen {
+                    width: 100%;
+                }
+
+                height: 100%;
+                object-fit: cover;
             }
         }
 
         &__overlay {
             position: absolute;
             bottom: -25px;
-            right: 50px;
+            left: -50px;
+
+            @include md-screen {
+                left: -10px;
+            }
+
+            @include sm-screen {
+                left: -20px;
+
+                transform: scale(0.9);
+            }
 
             img {
                 height: 145px;
@@ -35,53 +61,43 @@
     }
 }
 
-.about-thumb {}
 
-.about-count {
+.about-list {
     display: flex;
-    gap: 0px;
-    flex-direction: column;
+    gap: 30px;
     text-align: left;
 
-    &__number {
-        font-size: rem(70px);
-        font-weight: 700;
-        line-height: 1;
-        color: hsl(var(--black)/0.8);
-        display: flex;
-        align-items: center;
-        gap: 10px;
+    @include md-screen {
+        gap: 20px;
+    }
 
-        @media screen and (max-width:1299px) and (min-width:992px) {
-            font-size: rem(50px);
-        }
+    &:not(:last-of-type) {
+        margin-bottom: 40px;
+    }
 
-        @include md-screen {
-            font-size: rem(60px);
-        }
+    &__thumb {
+        flex-shrink: 0;
+        align-self: center;
 
         @include sm-screen {
-            font-size: rem(50px);
-        }
+            width: 48px;
+            height: 48px;
 
-        @include msm-screen {
-            font-size: rem(40px);
-        }
-
-        @include xsm-screen {
-            font-size: rem(25px);
-        }
-
-        .symbol {
-            color: hsl(var(--base));
         }
     }
+
+    &__content {}
+
+
 
     &__title {
         font-size: 24px;
         font-weight: 600;
+        margin-bottom: 10px;
+
 
         @include sm-screen {
+            margin-bottom: 5px;
             font-size: rem(22px);
         }
 
@@ -89,9 +105,12 @@
             font-size: rem(18px);
         }
 
-        @include xsm-screen {
-            font-size: rem(16px);
-        }
+
+    }
+
+    &__desc {
+        max-width: 425px;
+        line-height: 1.3;
     }
 }
 

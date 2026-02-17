@@ -2,18 +2,14 @@
 .banner-section {
   position: relative;
   z-index: 1;
-  padding: 180px 0 120px;
-  min-height: 100vh;
+  padding: 180px 0 100px;
 
-
-
-
-  @include lg-screen {
-    padding: 230px 0 140px;
+  @include xl-screen {
+    padding: 150px 0 75px;
   }
 
-  @include md-screen {
-    padding: 160px 0 100px;
+  @include lg-screen {
+    padding: 140px 0 65px;
   }
 
   @include msm-screen {
@@ -36,7 +32,8 @@
 
     @include md-screen {
       font-size: 18px;
-      flex-direction: column;
+      gap: 24px;
+
     }
 
     @include md-screen {
@@ -77,21 +74,28 @@
       display: block;
     }
 
+    &__inner {
+      display: flex;
+    }
+
     .banner-content__text {
       text-align: left;
     }
 
     @include xxl-screen {
       width: fit-content;
-      font-size: rem(90px);
+      font-size: rem(48px);
+      margin-bottom: 40px;
+
     }
 
     @include xl-screen {
-      font-size: rem(80px);
+      margin-bottom: 30px;
     }
 
     @include lg-screen {
-      font-size: rem(70px);
+      font-size: rem(42px);
+
     }
 
     @include md-screen {
@@ -143,10 +147,49 @@
     margin-bottom: 30px;
     padding-bottom: 30px;
     border-bottom: 1px solid hsl(var(--border-color));
+
+    @include md-screen {
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
   }
 
   &__button {
     margin-top: 30px;
+  }
+}
+
+.banner-thumb {
+  width: 355px;
+  height: 603px;
+  flex-shrink: 0;
+  border-radius: 500px;
+  overflow: hidden;
+  border: 5px solid hsl(var(--base));
+
+  @include xl-screen {
+    width: 100%;
+    border-radius: 60px;
+    border-top-left-radius: 150px;
+
+  }
+
+  @include lg-screen {
+    border-radius: 210px;
+
+  }
+
+  &-content {
+    @include xl-screen {
+      display: none;
+    }
+  }
+
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -155,21 +198,6 @@
   align-items: center;
   gap: 45px;
 
-  .banner-thumb {
-    width: 355px;
-    height: 603px;
-    flex-shrink: 0;
-    border-radius: 500px;
-    overflow: hidden;
-    border: 5px solid hsl(var(--base));
-
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
 
   .icon {
     color: hsl(var(--base));

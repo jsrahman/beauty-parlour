@@ -2,24 +2,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barber Shop | Html Template</title>
+
   <!-- Title -->
-  <title> Html Template</title>
-  <!-- Favicon -->
   <link rel="shortcut icon" href="assets/images/logo/favicon.png">
-  <!-- Bootstrap -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <!-- Fontasosome -->
   <link rel="stylesheet" href="assets/css/fontasosome.min.css">
-  <!-- Slick -->
   <link rel="stylesheet" href="assets/css/slick.css">
-  <!-- line awesome -->
   <link rel="stylesheet" href="assets/css/line-awesome.min.css">
-  <!-- Odometer -->
   <link rel="stylesheet" href="assets/css/odometer.css">
   <link rel="stylesheet" href="assets/css/odometer.css">
   <link rel="stylesheet" href="assets/css/fancybox.css">
-  <link href="assets/css/select2.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="assets/css/select2.min.css">
+  <link rel="stylesheet" href="assets/css/flatpickr.min.css">
+  <link rel="stylesheet" href="assets/css/aos.css">
 
   <!-- Main css -->
   <link rel="stylesheet" href="assets/css/main.css">
@@ -28,19 +24,25 @@
 <body>
   <!--==================== Preloader Start ====================-->
 <div class="preloader">
-    <div class="scissors">
-        <div class="half">
-            <div class="blade"></div>
-            <div class="handle"></div>
+    <div class=" loader">
+        <div class="circle">
+            <div class="dot"></div>
+            <div class="outline"></div>
         </div>
-
-        <div class="half">
-            <div class="blade"></div>
-            <div class="handle"></div>
+        <div class="circle">
+            <div class="dot"></div>
+            <div class="outline"></div>
         </div>
-
-        <div class="joint"></div>
+        <div class="circle">
+            <div class="dot"></div>
+            <div class="outline"></div>
+        </div>
+        <div class="circle">
+            <div class="dot"></div>
+            <div class="outline"></div>
+        </div>
     </div>
+    <h3 class="mb-0 mt-2">Loading...</h3>
 </div>
 <!--==================== Preloader End ====================-->
   <!--==================== Overlay Start ====================-->
@@ -92,7 +94,7 @@
                             <a class="nav-link" aria-current="page" href="about.html">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Dashboard</a>
+                            <a class="nav-link" href="#story">Dashboard</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Blog
@@ -163,7 +165,7 @@
     <!--==========================  Contact-form Section Start  ==========================-->
 <section class="contact-form-section my-120">
     <div class="container">
-        <div class="row contact-information pb-120">
+        <div class="row contact-information">
             <div class="col-md-4">
 
                 <div class="contact-information__card">
@@ -221,85 +223,110 @@
                 </div>
             </div>
         </div>
-        <div class="row gy-4">
-            <div class="col-xxl-7 col-lg-6">
-                <div class="contact-thumb">
-                    <div class="contact-thumb__top">
-                        <img src="assets/images/thumbs/contact-thmb-1.png" alt="">
-                    </div>
-                    <div class="contact-thumb__bottom">
-                        <div class="left">
-                            <div class="follow-card">
-                                <div class="follow-card__text">
-                                    Follow Social :
-                                </div>
-                                <div class="follow-card__social">
-                                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href=""><i class="fab fa-instagram"></i></a>
-                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                            <span class="thumb">
-                                <img src="assets/images/thumbs/contact-thmb-2.png" alt="">
-                            </span>
+    </div>
+</section>
+<!--==========================  Contact-form Section End  ==========================-->
 
-                        </div>
-                        <div class="right">
-                            <div class="right-top">
-                                <img src="assets/images/thumbs/contact-thmb-3.png" alt="">
-                            </div>
-                            <div class="right-bottom">
-                                <span class="title">Direct Mail Us:</span>
-                                <a href="mailto:info@barbarshop.com">info@barbarshop.com</a>
-                            </div>
-                        </div>
+<section class="contact my-120">
+    <div class="container">
+        <div class="contact-card">
+            <div class="row gy-4">
+                <div class="col-lg-6">
+                    <div class="section-heading style-left">
+                        <span class="section-heading__tagline" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">Feature Domain</span>
+                        <h2 class="section-heading__title" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+                            Connect With Our Experts
+                        </h2>
+                        <p class="section-heading__desc" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
+                            How quick is quick? We balance speed and quality to deliver top-notch design—fast.
+                        </p>
                     </div>
+                    <ul class="contact-step">
+                        <li class="contact-step-item" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
+                            <div class="contact-step-item__header">
+                                <div class="contact-step-item__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-headset-icon lucide-headset">
+                                        <path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"></path>
+                                        <path d="M21 16v2a4 4 0 0 1-4 4h-5"></path>
+                                    </svg>
+                                </div>
+                                <div class="contact-step-item__content">
+                                    <h6 class="contact-step-item__title">
+                                        24/7 customer support
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="contact-step-item__body">
+                                <p class="contact-step-item__desc">
+                                    Always available to guide your business with reliable support anytime.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="contact-step-item" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">
+                            <div class="contact-step-item__header">
+                                <div class="contact-step-item__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square-text-icon lucide-message-square-text">
+                                        <path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"></path>
+                                        <path d="M7 11h10"></path>
+                                        <path d="M7 15h6"></path>
+                                        <path d="M7 7h8"></path>
+                                    </svg>
+                                </div>
+                                <div class="contact-step-item__content">
+                                    <h6 class="contact-step-item__title">
+                                        Live chat and instant help
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="contact-step-item__body">
+                                <p class="contact-step-item__desc">
+                                    Quick solutions delivered instantly to keep your business moving forward.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-            <div class="col-xxl-5 col-lg-6">
-                <form action="" class="contact-input">
-                    <h3 class="contact-input__title">Let’s Connect</h3>
-                    <div class="contact-input__body">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label for="" class="form--label">Name</label>
-                                    <input type="text" placeholder="Enter your name" class="form--control">
+                <div class="col-lg-6">
+                    <form class="contact-form" action="" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
+                        <div class="contact-form__body">
+                            <div class="row gy-3 gy-xl-4">
+                                <div class="col-lg-6">
+                                    <label for="name" class="form--label required">Name</label>
+                                    <input class="form-control form-control--lg form--control" type="text" id="name">
                                 </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label for="" class="form--label">Email</label>
-                                    <input type="email" placeholder="Enter your email" class="form--control">
+                                <div class="col-lg-6">
+                                    <label for="email" class="form--label required">Email</label>
+                                    <input class="form-control form-control--lg form--control" type="text" id="email">
                                 </div>
-                            </div>
+                                <div class="col-sm-12">
+                                    <label for="name" class="form--label required">Subject</label>
+                                    <input class="form-control form-control--lg form--control" type="text" id="subject">
+                                </div>
+                                <div class="col-sm-12">
+                                    <label for="message" class="form--label required">Message</label>
+                                    <textarea class="form-control form-control--lg form--control" id="message" name="message"></textarea>
 
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label for="" class="form--label">Subject</label>
-                                    <input type="text" class="form--control">
                                 </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label for="" class="form--label">Message</label>
-                                    <textarea name="" id="" placeholder="Enter your text..." cols="30" rows="8" class="form--control"></textarea>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <button class="btn btn--base w-100" type="submit">Get Send message to us</button>
+                                <div class="col-sm-12">
+                                    <img class="mb-3" src="assets/images/thumbs/captcha.png" alt="">
+                                    <a href="login.html" class="btn btn--base  w-100">
+                                        <span class="text">
+                                            Summit
+                                        </span>
+
+                                        <span class="icon">
+                                            <i class="fa-solid fa-arrow-right ms-2"></i>
+                                        </span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 </section>
-<!--==========================  Contact-form Section End  ==========================-->
     <section class="map-show my-120">
         <div class="container">
             <div class="map">
@@ -310,85 +337,154 @@
     <!--==========================  Faq Section Start  ==========================-->
 <section class="faq-section my-120">
     <div class="container">
-        <div class="row gy-4 gx-5 justify-content-center">
-            <div class="col-lg-5">
-                <div class="section-heading style-left">
-                    <h2 class="section-heading__name">BARBER FAQ</h2>
-                    <h2 class="section-heading__title">Questions About Our Services</h2>
-                    <p class="section-heading__desc">We've compiled answers to common questions about our barbershop services, appointments, and products to help you.</p>
+        <div class="section-heading style-left">
+            <h2 class="section-heading__title mb-0">Frequently Asked Questions</h2>
+        </div>
+        <div class="accordion custom--accordion" id="faqAccordion">
+            <div class="row gy-3" id="faqAccordion">
+                <!-- Left column -->
+                <div class="col-lg-6">
+                    <!-- FAQ 1 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                What is a crypto &amp; fiat payment gateway?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <p class="accordion-body">
+                                It’s a unified platform that allows you to accept both cryptocurrencies and traditional fiat currencies from your customers, using one simple integration.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                How fast are payments processed?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <p class="accordion-body">
+                                Payments are usually processed within minutes. Network confirmation times and fiat settlement may cause slight variations.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Which cryptocurrencies and fiat currencies are supported?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <p class="accordion-body">
+                                The platform supports major cryptocurrencies like Bitcoin, Ethereum, and USDT, plus common fiat currencies such as USD, EUR, and GBP.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 5 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                How do you protect against fraud?
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <p class="accordion-body">
+                                We use encryption, multi-factor authentication, transaction monitoring, and automated risk checks to prevent fraudulent activity.
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
-                <a class="btn btn--base pill" href="contact.html">
-                    <span class="text">Contact Us</span>
-                    <span class="icon">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </span>
-                </a>
-            </div>
-            <div class="col-lg-7">
-                <div class="accordion custom--accordion" id="accordionFa">
+                <!-- Right column -->
+                <div class="col-lg-6">
+                    <!-- FAQ 6 -->
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
-                                How do I book an appointment?
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                Do I need to hold crypto to use this service?
                             </button>
                         </h2>
-                        <div id="collapse-1" class="accordion-collapse collapse" data-bs-parent="#accordionFa" style="">
-                            <div class="accordion-body">
-                                <p class="text">
-                                    You can easily book an appointment through our website, mobile app, or by calling us directly during business hours.
-                                </p>
-                            </div>
+                        <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <p class="accordion-body">
+                                No, holding crypto isn’t required. You can choose to always settle in fiat.
+                            </p>
                         </div>
                     </div>
+
+                    <!-- FAQ 7 -->
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
-                                What services do you offer?
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                How fast are payments processed?
                             </button>
                         </h2>
-                        <div id="collapse-2" class="accordion-collapse collapse" data-bs-parent="#accordionFa" style="">
-                            <div class="accordion-body">
-                                <p class="text">
-                                    We offer a full range of barber services including haircuts, shaves, beard trims, styling, and hair treatments.
-                                </p>
-                            </div>
+                        <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <p class="accordion-body">
+                                Payment speed depends on the network and fiat settlement. In most cases, funds are available within minutes.
+                            </p>
                         </div>
                     </div>
+
+                    <!-- FAQ 8 -->
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
-                                Do I need to bring anything to my appointment?
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                Which cryptocurrencies and fiat currencies are supported?
                             </button>
                         </h2>
-                        <div id="collapse-3" class="accordion-collapse collapse" data-bs-parent="#accordionFa" style="">
-                            <div class="accordion-body">
-                                <p class="text">
-                                    Just bring yourself! We provide all the necessary tools and products for your service. If you have a specific style or product in mind, feel free to mention it to your barber.
-                                </p>
-                            </div>
+                        <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <p class="accordion-body">
+                                Support covers leading crypto assets (BTC, ETH, USDT) and major fiat currencies (USD, EUR, GBP). Coverage may expand over time.
+                            </p>
                         </div>
                     </div>
+
+                    <!-- FAQ 9 -->
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-4" aria-expanded="true" aria-controls="collapse-4">
-                                What payment methods do you accept?
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                How do you protect against fraud?
                             </button>
                         </h2>
-                        <div id="collapse-4" class="accordion-collapse collapse show" data-bs-parent="#accordionFa" style="">
-                            <div class="accordion-body">
-                                <p class="text">
-                                    We accept cash, major credit cards (Visa, Mastercard, American Express), and mobile payments like Apple Pay and Google Pay.
-                                </p>
-                            </div>
+                        <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <p class="accordion-body">
+                                Fraud protection includes compliance checks, encryption, and automated monitoring systems to flag suspicious activity.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 10 (duplicate) -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                How do you protect against fraud?
+                            </button>
+                        </h2>
+                        <div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <p class="accordion-body">
+                                Our system combines advanced risk management tools, security layers, and compliance protocols to ensure safe transactions.
+                            </p>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="more-question flex-between gap-3">
+                <div class="more-question__content">
+                    <h4 class="more-question__title">Still Have Questions?</h4>
+                    <p class="more-question__desc">Please connect with our support team, we’re happy to help!</p>
+                </div>
+                <a href="contact.html" class="btn btn--base">Contact Support</a>
             </div>
         </div>
     </div>
 </section>
-
 <!--==========================  Faq Section End  ==========================-->
 
     <!-- ==================== Blog End Here ==================== -->
@@ -444,7 +540,7 @@
                     </div>
                 </div>
 
-                <div class="order-sm-3 order-lg-2 col-xxl-4 col-lg-2 col-md-4 col-sm-4">
+                <div class="order-sm-3 order-lg-2 col-xxl-8 col-lg-4 col-md-7 col-sm-7">
                     <div class="footer-item time-menu">
                         <h5 class="footer-item__title">Work Time</h5>
                         <ul class="footer-menu">
@@ -468,7 +564,7 @@
                     </div>
                 </div>
 
-                <div class="order-sm-4 order-lg-3 col-xxl-2 col-lg-2 col-md-4 col-sm-4">
+                <div class="order-sm-4 order-lg-3 col-xxl-2 col-lg-2 col-md-5 col-sm-5">
                     <div class="footer-item">
                         <h5 class="footer-item__title">Quick Links</h5>
                         <ul class="footer-menu">
@@ -557,16 +653,12 @@
 <script src="assets/js/slick.min.js"></script>
 <!-- Odometer js -->
 <script src="assets/js/odometer.min.js"></script>
-<!-- Viewport js -->
 <script src="assets/js/viewport.jquery.js"></script>
 <script src="assets/js/select2.min.js"></script>
-
 <script src="assets/js/fancybox.umd.js"></script>
-
 <script src="assets/js/apexcharts.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-
+<script src="assets/js/flatpickr.js"></script>
+<script src="assets/js/aos.js"></script>
 
 <!-- main js -->
 <script src="assets/js/main.js"></script>

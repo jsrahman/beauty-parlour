@@ -1,186 +1,121 @@
 /* =========================== Accordion Css start ============================= */
 .custom--accordion {
-  --accordion-padding: 24px;
-}
+  --p: 24px;
 
-@media screen and (max-width: 991px) {
-  .custom--accordion {
-    --accordion-padding: 18px;
+  @include sm-screen {
+    --p: 18px;
   }
-}
 
-@media screen and (max-width: 575px) {
-  .custom--accordion {
-    --accordion-padding: 15px;
+  .accordion-item {
+    background-color: transparent !important;
+    border-radius: 12px;
+    overflow: hidden;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    outline: 1px solid hsl(var(--base));
+
+    &:has([aria-expanded="true"]) {
+      box-shadow: 2px 2px 0 2px hsl(var(--base));
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    .accordion-button {
+      padding: var(--p);
+      padding-right: calc(var(--p) + 22px) !important;
+    }
   }
-}
 
-.custom--accordion .accordion-item {
-  border: 0;
-  border-top: 1px solid hsl(var(--border-color));
-  background-color: transparent !important;
-  overflow: hidden;
-  border-radius: 0;
-}
-
-.custom--accordion .accordion-item:last-child {
-  border-bottom: none;
-}
-
-.custom--accordion .accordion-item:first-child {
-  border-top: none;
-}
-
-.custom--accordion .accordion-header {
-  line-height: 1;
-}
-
-.custom--accordion .accordion-button {
-  font-size: 1.25rem;
-  font-weight: 600;
-  line-height: 1.4;
-  padding: 0;
-  font-family: var(--body-font);
-  padding-block: var(--accordion-padding);
-  -webkit-transition: 0.2s linear;
-  transition: 0.2s linear;
-  -webkit-transition-delay: 0.1s;
-  transition-delay: 0.1s;
-}
-
-@media screen and (max-width: 991px) {
-  .custom--accordion .accordion-button {
-    font-size: 1.125rem;
+  .accordion-header {
+    line-height: 1;
+    color: hsl(var(--neutral-900));
+    font-size: clampCal(16px, 18px);
+    font-weight: 500;
   }
-}
 
-@media screen and (max-width: 575px) {
-  .custom--accordion .accordion-button {
-    font-size: 1rem;
-  }
-}
-
-.custom--accordion .accordion-button::after {
-  background-image: none;
-}
-
-.custom--accordion .accordion-button:focus {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-.custom--accordion .accordion-button:not(.collapsed) {
-  color: hsl(var(--heading-color));
-  background-color: transparent !important;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-.custom--accordion .accordion-button:not(.collapsed)::after {
-  background-image: none;
-  color: hsl(var(--heading-color));
-}
-
-.custom--accordion .accordion-button[aria-expanded=true]::after,
-.custom--accordion .accordion-button[aria-expanded=false]::after {
-  font-family: "Line Awesome Free";
-  font-weight: 900;
-  content: "\f068";
-  display: inline-block;
-  position: absolute;
-  top: calc(var(--accordion-padding) / 2 + 12px);
-  right: 15px;
-  height: unset;
-  border: 1px solid hsl(var(--border-color));
-  width: 25px;
-  height: 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-transform: unset !important;
-  transform: unset !important;
-  background-color: hsl(var(--base));
-  color: hsl(var(--white));
-}
-
-
-@media screen and (max-width: 991px) {
-
-  .custom--accordion .accordion-button[aria-expanded=true]::after,
-  .custom--accordion .accordion-button[aria-expanded=false]::after {
-    top: calc(var(--accordion-padding) / 2 + 8px);
-  }
-}
-
-@media screen and (max-width: 575px) {
-
-  .custom--accordion .accordion-button[aria-expanded=true]::after,
-  .custom--accordion .accordion-button[aria-expanded=false]::after {
-    top: calc(var(--accordion-padding) / 2 + 6px);
-  }
-}
-
-.custom--accordion .accordion-button[aria-expanded=false]::after {
-  content: "\f067";
-  color: hsl(var(--body-color));
-  background-color: transparent;
-  color: hsl(var(--base));
-}
-
-
-.custom--accordion .accordion-item {
-  border-top: 1px solid hsl(var(--border-color));
-}
-
-.shipping-list .custom--accordion .accordion-item {
-  border-top: 1px solid hsl(var(--black)/ 0.1);
-}
-
-.custom--accordion .accordion-button[aria-expanded=true] {
-  padding-bottom: 16px;
-}
-
-@media screen and (max-width: 991px) {
-  .custom--accordion .accordion-button[aria-expanded=true] {
-    padding-bottom: 14px;
-  }
-}
-
-@media screen and (max-width: 575px) {
-  .custom--accordion .accordion-button[aria-expanded=true] {
-    padding-bottom: 12px;
-  }
-}
-
-.custom--accordion .accordion-body {
-  padding: 0;
-  padding-bottom: var(--accordion-padding);
-}
-
-.custom--accordion .accordion-body .text {
-  line-height: 1.5;
-  font-size: 1rem;
-}
-
-@media screen and (max-width: 991px) {
-  .custom--accordion .accordion-body .text {
-    font-size: 0.875rem;
+  .accordion-body {
+    padding: var(--p);
+    padding-top: 0;
+    background-color: var(--base-50);
+    color: hsl(var(--neutral-700));
     font-weight: 400;
+
+    .text {
+      max-width: 60%;
+
+      @include msm-screen {
+        max-width: 100%;
+      }
+    }
   }
-}
 
-.custom--accordion:first-of-type .accordion-button.collapsed {
-  border-radius: 5px;
-}
+  &:first-of-type .accordion-button.collapsed {
+    border-radius: 5px;
+  }
 
-.custom--accordion:last-of-type .accordion-button.collapsed {
-  border-radius: 5px;
+  &:last-of-type .accordion-button.collapsed {
+    border-radius: 5px;
+  }
+
+  .accordion-button {
+    background-color: var(--base-50);
+    @include fs-18;
+    padding: 15px;
+
+    @include msm-screen {
+      padding: 13px;
+      padding-right: 30px;
+    }
+
+    &::after {
+      background-image: none;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &:not(.collapsed) {
+      color: hsl(var(--neutral-900));
+      background-color: var(--base-50) !important;
+      box-shadow: none;
+
+      &::after {
+        background-image: none;
+        color: hsl(var(--base));
+      }
+    }
+
+    &[aria-expanded='true'],
+    &[aria-expanded='false'] {
+      &::after {
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        content: '\f068';
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 15px;
+        font-size: 14px;
+        height: unset;
+        background-color: hsl(var(--base));
+        color: hsl(var(--white));
+        width: 18px;
+        height: 18px;
+        line-height: 18px;
+        text-align: center;
+      }
+    }
+
+    &[aria-expanded='false'] {
+      &::after {
+        content: '\f067';
+      }
+    }
+  }
 }
 
 /* ================================= Accordion Css End =========================== */
