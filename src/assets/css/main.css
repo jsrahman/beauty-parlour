@@ -5468,6 +5468,8 @@ body:has(.common-banner) .header:not(.fixed-header) .nav-menu::after {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 @media screen and (max-width: 1199px) {
@@ -5486,6 +5488,7 @@ body:has(.common-banner) .header:not(.fixed-header) .nav-menu::after {
 @media screen and (max-width: 991px) {
     .banner-section .banner-service {
         font-size: 16px;
+        row-gap: 10px;
     }
 }
 
@@ -8208,6 +8211,30 @@ section.blog .blog-header .btn {
     max-width: 100%;
 }
 
+@media screen and (max-width: 1199px) {
+    .experience-section .section-heading__title {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .experience-section .section-heading__title {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .experience-section .section-heading__title {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .experience-section .section-heading__title {
+        font-size: 22px;
+    }
+}
+
 .experience-section .about-img {
     width: 100%;
 }
@@ -8220,6 +8247,13 @@ section.blog .blog-header .btn {
     object-fit: cover;
     border-top-right-radius: 150px;
     border: 2px solid hsl(var(--base));
+}
+
+@media screen and (max-width: 424px) {
+    .experience-section .about-img img {
+        border-top-right-radius: 100px;
+        max-height: 300px;
+    }
 }
 
 .experience-section .author-info {

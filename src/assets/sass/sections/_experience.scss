@@ -6,6 +6,24 @@
         max-width: 100%;
     }
 
+    .section-heading__title {
+        @include lg-screen {
+            font-size: 32px;
+        }
+
+        @include md-screen {
+            font-size: 28px;
+        }
+
+        @include sm-screen {
+            font-size: 24px;
+        }
+
+        @include xsm-screen {
+            font-size: 22px;
+        }
+    }
+
     .about-img {
         width: 100%;
 
@@ -17,6 +35,11 @@
 
             border-top-right-radius: 150px;
             border: 2px solid hsl(var(--base));
+
+            @include xsm-screen {
+                border-top-right-radius: 100px;
+                max-height: 300px;
+            }
         }
     }
 
