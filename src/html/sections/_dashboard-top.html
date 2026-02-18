@@ -5,33 +5,117 @@
     </button>
     <h4 class="dashboard-header__title mb-0 ">@@title</h4>
     <div class="dashboard-header__right">
-        @@if(!context.isHideSearchIcon){
-        <button class="search-dropdown d-md-none" type="button">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="hsl(var(--base))" fill="none">
-                <path d="M17 17L21 21" stroke="hsl(var(--base))" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19C15.4183 19 19 15.4183 19 11Z" stroke="hsl(var(--base))" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-        </button>
-        }
-        @@if(context.hasSearch ){
-        <div class="dashboard__search mobile-dropdown">
-            <div class="input-group">
-                <div class="input-group-text">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="hsl(var(--base))" fill="none">
-                        <path d="M17 17L21 21" stroke="hsl(var(--base))" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19C15.4183 19 19 15.4183 19 11Z" stroke="hsl(var(--base))" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
+        <div class="dashboard-info__icon notification dropdown header-dropdown">
+            <button class="dropdown-toggle" id="" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                <span class="count"></span>
+                <i class="fa-regular fa-bell"></i>
+
+            </button>
+            <div class="dropdown-menu dropdown-menu-lg-end notification__area">
+                <div class="notification__header">
+                    <h4 class="notification__header-text">Notification</h4>
+                    <div class="notification__header-info">
+                        <span class="notification__header-info-count badge--primary badge custom--badge">8 New</span>
+
+                        <button class="notification__header-read" roll="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Mark all read">
+                            <i class="fa-regular fa-bell"></i>
+                        </button>
+
+                    </div>
                 </div>
-                <input type="text" placeholder="Search Transition" class="form-control dashboard-header__search-input" placeholder="Search">
-                <div class="input-group-text command">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20" fill="none">
-                        <path d="M11.7489 5.46585V14.8651C11.7489 15.3299 11.8867 15.7842 12.1449 16.1706C12.4031 16.5571 12.7701 16.8583 13.1995 17.0361C13.6289 17.214 14.1013 17.2605 14.5572 17.1698C15.013 17.0792 15.4317 16.8554 15.7603 16.5267C16.0889 16.1981 16.3127 15.7794 16.4034 15.3236C16.4941 14.8678 16.4475 14.3953 16.2697 13.9659C16.0918 13.5365 15.7907 13.1695 15.4042 12.9113C15.0178 12.6531 14.5635 12.5153 14.0987 12.5153H4.69944C4.23468 12.5153 3.78037 12.6531 3.39394 12.9113C3.00752 13.1695 2.70633 13.5365 2.52848 13.9659C2.35063 14.3953 2.30409 14.8678 2.39476 15.3236C2.48543 15.7794 2.70923 16.1981 3.03786 16.5267C3.36649 16.8554 3.78519 17.0792 4.24101 17.1698C4.69683 17.2605 5.1693 17.214 5.59868 17.0361C6.02805 16.8583 6.39504 16.5571 6.65324 16.1706C6.91145 15.7842 7.04926 15.3299 7.04926 14.8651V5.46585C7.04926 5.0011 6.91145 4.54678 6.65324 4.16035C6.39504 3.77393 6.02805 3.47274 5.59868 3.29489C5.1693 3.11704 4.69683 3.0705 4.24101 3.16117C3.78519 3.25184 3.36649 3.47564 3.03786 3.80427C2.70923 4.1329 2.48543 4.5516 2.39476 5.00742C2.30409 5.46324 2.35063 5.93571 2.52848 6.36509C2.70633 6.79446 3.00752 7.16145 3.39394 7.41966C3.78037 7.67786 4.23468 7.81567 4.69944 7.81567H14.0987C14.5635 7.81567 15.0178 7.67786 15.4042 7.41966C15.7907 7.16145 16.0918 6.79446 16.2697 6.36509C16.4475 5.93571 16.4941 5.46324 16.4034 5.00742C16.3127 4.5516 16.0889 4.1329 15.7603 3.80427C15.4317 3.47564 15.013 3.25184 14.5572 3.16117C14.1013 3.0705 13.6289 3.11704 13.1995 3.29489C12.7701 3.47274 12.4031 3.77393 12.1449 4.16035C11.8867 4.54678 11.7489 5.0011 11.7489 5.46585Z" stroke="currentColor" stroke-width="1.56655" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg> /
+                <div class="top-notification__body">
+                    <ul class="notification__items">
+                        <li class="notification__list">
+                            <div class="notification__list-thumb">
+                                <img class="fit-image" src="../../assets/images/thumbs/team-01.jpg" alt="notification thumb">
+                            </div>
+                            <div class="notification__list-content">
+                                <p class="notification__list-title"> Jhone Ana</p>
+                                <p class="notification__list-desc">Lorem ipsum dolor sit amet consectetur.</p>
+                            </div>
+                            <div class="notification__list-status">
+                                <span class="notification__list-time">
+                                    10 AM
+                                </span>
+                                <div class="notification__list-available">
+                                    <span class="notification__list-available_icon"></span>
+                                    <span class="notification__list-available_close">
+                                        <i class="fa-solid fa-xmark"></i>
+
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="notification__list">
+                            <div class="notification__list-text bg--success">
+                                <span class="">TJ</span>
+                            </div>
+                            <div class="notification__list-content">
+                                <p class="notification__list-title"> Jhone Ana</p>
+                                <p class="notification__list-desc">Lorem ipsum dolor sit amet consectetur.</p>
+                            </div>
+                            <div class="notification__list-status">
+                                <span class="notification__list-time">
+                                    10 AM
+                                </span>
+                                <div class="notification__list-available">
+                                    <span class="notification__list-available_icon"></span>
+                                    <span class="notification__list-available_close">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="notification__list">
+                            <div class="notification__list-text bg--success">
+                                <span class="icon"><i class="fa-solid fa-coins"></i></span>
+                            </div>
+                            <div class="notification__list-content">
+                                <p class="notification__list-title"> Jhone Ana</p>
+                                <p class="notification__list-desc">Lorem ipsum dolor sit amet consectetur.</p>
+                            </div>
+                            <div class="notification__list-status">
+                                <span class="notification__list-time">
+                                    10 AM
+                                </span>
+                                <div class="notification__list-available">
+                                    <span class="notification__list-available_icon"></span>
+                                    <span class="notification__list-available_close">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="notification__list">
+                            <div class="notification__list-text bg--success">
+                                <span class="icon"><i class="fa-solid fa-coins"></i></span>
+                            </div>
+                            <div class="notification__list-content">
+                                <p class="notification__list-title"> Jhone Ana</p>
+                                <p class="notification__list-desc">Lorem ipsum dolor sit amet consectetur.</p>
+                            </div>
+                            <div class="notification__list-status">
+                                <span class="notification__list-time">
+                                    10 AM
+                                </span>
+                                <div class="notification__list-available">
+                                    <span class="notification__list-available_icon"></span>
+                                    <span class="notification__list-available_close">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="notification__footer">
+                    <a class="btn btn--base">
+                        <span class="text">Load More</span>
+                        <span class="icon"><i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
                 </div>
             </div>
         </div>
-        }
-
         <div class="dropdown user-info">
             <button class=" user-info__button dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                 <img src="assets/images/thumbs/user-profile.png" class="fit-image" alt="">
