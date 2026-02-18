@@ -2,8 +2,19 @@
 .process-section {
     .process-inner {
         --gap: 60px;
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
         text-align: center;
+        row-gap: 30px;
+
+        @include md-screen {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include sm-screen {
+            row-gap: 0px;
+            grid-template-columns: repeat(1, 1fr);
+        }
 
 
         &__item {
@@ -24,6 +35,33 @@
                 border-left: 1px solid hsl(var(--black)/0.1);
             }
 
+            @include md-screen {
+                min-height: auto;
+
+
+                &:nth-child(3) {
+                    border-left: none;
+                }
+
+                &:first-child {
+                    padding-top: 0 !important;
+                }
+
+                &:last-child {
+                    padding-bottom: 0 !important;
+                }
+
+            }
+
+            @include sm-screen {
+                border: 0 !important;
+                margin-left: 0 !important;
+                padding-left: 0 !important;
+
+                &:not(:last-of-type) {
+                    border-bottom: 1px solid hsl(var(--black)/0.1) !important;
+                }
+            }
 
 
 
@@ -37,6 +75,14 @@
                 -webkit-text-stroke: 1px hsl(var(--black)/0.2);
                 opacity: .3;
                 line-height: 1;
+
+                @include xl-screen {
+                    font-size: 120px;
+                }
+
+                @include lg-screen {
+                    font-size: 100px;
+                }
             }
 
             &-title {
@@ -45,11 +91,23 @@
                 margin-top: -20px;
                 margin-bottom: 0px;
 
+                @include xl-screen {
+                    font-size: 30px;
+                }
+
+                @include lg-screen {
+                    font-size: 25px;
+                }
+
             }
 
             &-desc {
-                font-size: 15px;
+                font-size: 18px;
                 margin-top: 10px;
+
+                @include xl-screen {
+                    font-size: 16px;
+                }
             }
         }
     }

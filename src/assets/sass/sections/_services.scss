@@ -9,35 +9,9 @@
     border-bottom: 0;
     height: 100%;
 
+
 }
 
-.service-list__item {
-    font-size: 30px;
-    font-weight: 600;
-    color: #A8A8A8;
-    border: 0 !important;
-    position: relative;
-
-    &.active {
-        color: hsl(var(--black));
-
-        &::before {
-            opacity: 1;
-        }
-    }
-
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: -2px;
-        width: 4px;
-        height: 100%;
-        background-color: hsl(var(--base));
-        opacity: 0;
-        transition: all 0.3s ease;
-    }
-}
 
 .service-content {
     width: 100%;
@@ -52,6 +26,10 @@
         width: 100%;
         height: 300px;
 
+        @include xl-screen {
+            height: 250px;
+        }
+
         img {
             width: 100%;
             height: 100%;
@@ -63,6 +41,10 @@
         text-align: center;
         padding: 22px;
 
+        @include xl-screen {
+            padding: 16px;
+        }
+
     }
 
     .start-pricing {
@@ -72,6 +54,10 @@
         flex-wrap: wrap;
         gap: 30px;
         margin-block: 10px;
+
+        @include lg-screen {
+            row-gap: 14px;
+        }
 
         .start-list {
             display: flex;
@@ -94,6 +80,14 @@
         white-space: nowrap;
         margin-bottom: 0px;
 
+        @include lg-screen {
+            font-size: 22px;
+        }
+
+        @include md-screen {
+            font-size: 20px;
+        }
+
     }
 
     &__desc {
@@ -103,6 +97,10 @@
         @include line-clamp(2);
         margin-bottom: 20px;
 
+        @include xl-screen {
+            margin-bottom: 14px;
+        }
+
     }
 
     &__price {
@@ -110,6 +108,14 @@
         font-weight: 600;
         color: hsl(var(--black));
         margin-bottom: 0;
+
+        @include lg-screen {
+            font-size: 26px;
+        }
+
+        @include md-screen {
+            font-size: 24px;
+        }
 
     }
 }

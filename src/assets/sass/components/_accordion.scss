@@ -38,7 +38,7 @@
   .accordion-body {
     padding: var(--p);
     padding-top: 0;
-    background-color: var(--base-50);
+    // background-color: var(--base-50);
     color: hsl(var(--neutral-700));
     font-weight: 400;
 
@@ -60,9 +60,11 @@
   }
 
   .accordion-button {
-    background-color: var(--base-50);
+    // background-color: var(--base-50);
+    background-color: transparent;
     @include fs-18;
     padding: 15px;
+    font-weight: 700;
 
     @include msm-screen {
       padding: 13px;
@@ -79,7 +81,8 @@
 
     &:not(.collapsed) {
       color: hsl(var(--neutral-900));
-      background-color: var(--base-50) !important;
+      // background-color: var(--base-50) !important;
+      background-color: transparent !important;
       box-shadow: none;
 
       &::after {

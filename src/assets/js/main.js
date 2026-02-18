@@ -176,7 +176,7 @@
         prevArrow: $(".testimonial-slider__arrow .arrow-left"),
         nextArrow: $(".testimonial-slider__arrow .arrow-right"),
       };
-      $(".testimonial-slider").slick({
+      $(".testimonial").slick({
         ...testimonialSliderConfig,
         responsive: [
           {

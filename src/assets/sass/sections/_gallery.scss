@@ -51,23 +51,53 @@
     gap: 14px;
     max-height: 650px;
 
+    @include md-screen {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 8px;
+
+    }
+
 
     .div1 {
         grid-row: span 2 / span 2;
+
+        @include md-screen {
+            grid-row: span 2 / span 2;
+            grid-column-start: 1;
+            grid-row-start: 2;
+        }
     }
 
     .div2 {
         grid-column: span 2 / span 2;
+
+        @include md-screen {
+            grid-column: span 2 / span 2;
+            grid-column-start: 1;
+            grid-row-start: 1;
+        }
+
     }
 
     .div3 {
         grid-column-start: 2;
         grid-row-start: 2;
+
+        @include md-screen {
+            grid-row-start: 2;
+        }
     }
 
     .div4 {
         grid-column-start: 3;
         grid-row-start: 2;
+
+        @include md-screen {
+            grid-column-start: 2;
+            grid-row-start: 3;
+        }
     }
 
     img {

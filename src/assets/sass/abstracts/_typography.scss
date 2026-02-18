@@ -15,6 +15,10 @@ body {
   flex-direction: column;
 }
 
+main {
+  overflow-x: hidden;
+}
+
 p {
   @include fs-16;
   margin: 0;

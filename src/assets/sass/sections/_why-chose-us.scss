@@ -9,6 +9,49 @@
         align-items: center;
         gap: 20px;
 
+        @include lg-screen {
+            --space: 30px;
+            flex-shrink: 0;
+            padding-top: 0;
+            margin-top: 0;
+            border-top: 0;
+            border-left: 1px solid hsl(var(--black)/0.1);
+            margin-left: var(--space) !important;
+            padding-left: var(--space);
+        }
+
+
+        @include md-screen {
+            flex-wrap: wrap;
+            text-align: center;
+            margin-inline: auto;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @include sm-screen {
+            max-width: 200px;
+
+        }
+
+        @include msm-screen {
+            --space: 20px;
+            max-width: 100%;
+            width: 100%;
+            border-left: 0;
+            padding-left: 0;
+            margin-left: 0 !important;
+            padding-bottom: var(--space);
+            margin-bottom: var(--space);
+            justify-content: flex-start;
+            border-bottom: 1px solid hsl(var(--black)/0.1);
+            text-align: left;
+
+
+
+        }
+
+
         &__thumb {
             flex-shrink: 0;
         }
@@ -17,6 +60,11 @@
             font-size: 18px;
             font-weight: 700;
             line-height: 1.2;
+            flex: 1 1 180px;
+
+            @include sm-screen {
+                font-size: 16px
+            }
         }
 
     }
@@ -46,6 +94,12 @@
 
         @include lg-screen {
             gap: 25px;
+
+            &:last-child {
+                &::after {
+                    display: none;
+                }
+            }
         }
 
         @include md-screen {
@@ -93,10 +147,14 @@
         }
 
         .text {
-            font-size: 16px;
+            font-size: 18px;
             line-height: 1.5;
             color: hsl(var(--black)/0.8);
             font-weight: 600;
+
+            @include md-screen {
+                font-size: 16px;
+            }
         }
 
     }
@@ -111,6 +169,9 @@
             position: relative;
             border: 2px solid hsl(var(--base));
 
+            @include lg-screen {
+                max-height: 530px;
+            }
 
 
             img {
@@ -122,14 +183,44 @@
         }
     }
 
+    &__cta {
+        @include lg-screen {
+            display: flex;
+            align-items: center;
+            border-top: 1px solid hsl(var(--border-color));
+            padding-top: var(--bs-gutter-y);
+        }
+
+        @include msm-screen {
+            flex-direction: column-reverse;
+        }
+
+    }
+
+    &__text {
+        @include md-screen {
+            flex: 1;
+        }
+
+    }
+
     &__content {
-
-
-
         .text {
             font-size: 16px;
             font-weight: 500;
             margin-bottom: 30px;
+
+            @include lg-screen {
+                margin-bottom: 20px;
+            }
+
+            @include md-screen {
+                margin-bottom: 15px;
+            }
+
+            @include sm-screen {
+                margin-bottom: 10px;
+            }
         }
 
     }

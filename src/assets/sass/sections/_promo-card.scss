@@ -25,6 +25,14 @@
             margin-left: 0;
         }
 
+        @include msm-screen {
+            gap: 16px;
+        }
+
+        @include xsm-screen {
+            gap: 10px;
+        }
+
         &-item {
             display: flex;
             flex-direction: column;
@@ -40,6 +48,14 @@
 
             @include sm-screen {
                 gap: 24px;
+            }
+
+            @include msm-screen {
+                gap: 18px;
+            }
+
+            @include xsm-screen {
+                gap: 16px;
             }
         }
 
@@ -68,6 +84,12 @@
             @include sm-screen {
                 --size: 35px;
             }
+
+            @include msm-screen {
+                --size: 45px;
+
+            }
+
         }
 
         &__content {
@@ -126,17 +148,35 @@
             flex-direction: row-reverse;
             margin-left: 0px;
 
+            @include sm-screen {
+                flex-direction: row;
+            }
+
             &__title {
                 text-align: right;
+
+                @include sm-screen {
+                    text-align: left;
+                }
+
 
                 &::before {
                     right: 0;
                     left: auto;
+
+                    @include sm-screen {
+                        left: 0;
+
+                    }
                 }
             }
 
             &__desc {
                 text-align: right;
+
+                @include sm-screen {
+                    text-align: left;
+                }
             }
         }
     }
