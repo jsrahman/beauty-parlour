@@ -5218,6 +5218,8 @@ body:has(.common-banner) .header:not(.fixed-header) .nav-menu::after {
     height: 100%;
     background-color: hsl(var(--black)/0.5);
     z-index: -1;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 }
 
 .common-banner__title {

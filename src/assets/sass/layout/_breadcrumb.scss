@@ -17,6 +17,7 @@
     height: 100%;
     background-color: hsl(var(--black)/0.5);
     z-index: -1;
+    backdrop-filter: blur(10px);
 
   }
 
