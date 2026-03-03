@@ -331,6 +331,10 @@
     }
 
     .count {
+      position: static;
+      background-color: transparent;
+      width: 100%;
+      height: auto;
       color: hsl(var(--white));
       font-size: 24px;
       font-weight: 600;
